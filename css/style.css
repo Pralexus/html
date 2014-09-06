@@ -1,0 +1,239 @@
+﻿html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, 
+big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, 
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, 
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, 
+time, mark, audio, video {  margin: 0;  padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {  display: block;}
+ol, ul {list-style: none;}
+b, strong {font-weight:bold;}
+em, i {  font-style:italic;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+input, textarea, button {outline: none;}
+a,a:link, a:visited, a:hover{outline:none;}
+html,body { height:100%;  margin:0;  padding:0;}
+
+body{
+  color: #333;
+  font: 13px/1.4em Arial, sans-serif;
+  background: #fff;
+  -webkit-backface-visibility:hidden;
+}
+
+a { text-decoration:underline; color: #678BD8;}
+a:hover { text-decoration:underline; color: #d70017;}
+::selection {
+  color: #fff;
+  background: #2597ff;
+  text-shadow: none;
+}
+
+::-webkit-input-placeholder  { color:#999; }
+input:-moz-placeholder { color:#999; opacity: 1;}
+input:-ms-input-placeholder {color:#999;}
+
+input[type="text"]:focus, input[type="password"]:focus {background: #FFFACE !important;}
+input[type="text"]:focus::-webkit-input-placeholder, input[type="password"]:focus::-webkit-input-placeholder  { color: transparent; }
+input[type="text"]:focus::-moz-placeholder ,input[type="password"]:focus::-moz-placeholder { color: transparent; }
+input[type="text"]:focus::-ms-placeholder ,input[type="password"]:focus::-moz-placeholder { color: transparent; }
+
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  overflow: hidden;
+}
+
+.site_size {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  height: 90px;
+  background: #fff;
+}
+
+.conteiner {
+  padding: 0 0 100px 0;
+}
+
+.content {
+
+}
+
+.tac {text-align: center;}
+.tar {text-align: right;}
+.tal {text-align: left;}
+.fll {float: left;}
+.flr {float: right;}
+.cls {font-size: 0; display: table;width: 100%;}
+.content ul {
+  margin: 1em 0 1em 1.5em;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.content ol {
+  margin: 1em 0 1em 1.5em;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+.content table  {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-bottom: 1px solid #333;
+  border-left: 1px solid #333;
+  width: 100%;
+  margin: 10px 0 18px;
+}
+.content table th,
+.content table td {
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+}
+.content table th { font-weight: bold;}
+.content table thead th {vertical-align: bottom;}
+.clear { clear: both;}
+.clearFix:after{
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+}
+.imgLeft {margin:4px 10px 2px 0;float:left !important; clear:both;}
+.imgRight {margin:4px 0 2px 10px;float:right !important; clear:both;}
+#ctrlcopy {
+  height:1px;
+  overflow:hidden;
+  position:absolute;
+  width:1px;
+  margin: 5px 0 0 -1px;
+  line-height:0;
+  opacity: 0;
+}
+
+.footer {
+  margin: -100px auto 0;
+  height: 100px;  
+  position: relative;
+}
+
+.footer_left {
+  width: 230px; 
+  margin:0; 
+  float:left; 
+  position:relative;
+}
+.footer_left_ind {
+  padding:10px 0 0 0; 
+  font: 11px/1.2em Arial, Geneva, sans-serif;
+  color: #787878;
+}
+
+.footer_center_ind {
+  padding:10px 230px 0 230px; 
+  font:11px/1.2em Arial, Geneva, sans-serif;
+}
+.footer_center_ind img { 
+  margin:0; 
+  max-width:468px;
+}
+.footer_center_ind a { 
+  text-decoration: none !important;
+  color: #bd818a;
+}
+.footer_center_ind a:hover {color:#d70017;}
+
+.footer_right { 
+  width:215px; 
+  float:right; 
+  position:relative; 
+  padding:20px 0 0 0;
+}
+.footer_right a, .footer_right a:hover { 
+  text-decoration:none;
+  font:11px/1.2em Tahoma, Geneva, sans-serif; 
+  display:block;
+}
+.footer_right span.wezom_txt { 
+  color:#787878; 
+  text-decoration:none;
+  display:inline-block; 
+  vertical-align:top;
+}
+.footer_right a:hover .wezom_txt {
+  color:#787878;
+}
+.footer_right a .wezom_txt { 
+  text-decoration: none; 
+  color:#787878;
+}
+.footer_right a .wezom_txt span {
+  text-decoration: underline;
+}
+.footer_right a:hover .wezom_txt span { 
+  color:#f00;
+}
+
+.wezom_logo {  
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-top: -5px;
+}
+
+.wezom_star {  
+  position: absolute;
+  top: 4px;
+  left: 56px;
+}
+
+@-webkit-keyframes wezom_star {
+  from {top: 9px;  left: 23px; -webkit-transform: rotate(-140deg);}
+  25% {top: 0;}  50% {top: 0;}  80% {top: 1px;}  95% {top: 2px;}
+  to {  top: 3px;left: 56px; -webkit-transform: rotate(0deg);}
+}
+
+@-moz-keyframes wezom_star {
+  from {top: 9px;  left: 23px;  -moz-transform: rotate(-140deg);}
+  25% {top: 0;}  50% {top: 0;}  80% {top: 1px;}  95% {top: 2px;}
+  to {  top: 3px;left: 56px; -moz-transform: rotate(0deg);}
+}
+
+
+@keyframes wezom_star {
+  from {top: 9px;  left: 23px; transform: rotate(-140deg);}
+  25% {top: 0;}  50% {top: 0;}  80% {top: 1px;}  95% {top: 2px;}
+  to {  top: 3px;left: 56px; transform: rotate(0deg);}
+}
+
+.anim .wezom_star {animation: wezom_star 0.5s linear; -moz-animation: wezom_star 0.5s linear; -webkit-animation: wezom_star 0.5s linear; }
+
+.wezom_star_trek {
+  position: absolute;
+  top: -1px;
+  left: 21px;
+  width: 50px;
+  height: 19px;
+  background: url(../pic/wezom_star_trek.png) no-repeat bottom left;
+}
+
+.anim .wezom_star_trek {
+  animation: wezom_star_trek 0.5s linear;
+  -moz-animation: wezom_star_trek 0.5s linear;
+  -webkit-animation: wezom_star_trek 0.5s linear;
+}
+
+@keyframes wezom_star_trek {from {width: 0px;}10% {  width: 10px;}to {width: 38px; }}
+@-moz-keyframes wezom_star_trek {from {width: 0px;}10% {  width: 10px;}to {width: 38px; }}
+@-webkit-keyframes wezom_star_trek { from { width: 0px; } 10% {width: 10px;} to {width: 38px;}}
