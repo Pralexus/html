@@ -15,6 +15,14 @@ input, textarea, button {outline: none;}
 a,a:link, a:visited, a:hover{outline:none;}
 html,body { height:100%;  margin:0;  padding:0;}
 
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  -webkit-border-radius:0; 
+  border-radius:0;
+}
+
 body{
   color: #333;
   font: 13px/1.4em Arial, sans-serif;
