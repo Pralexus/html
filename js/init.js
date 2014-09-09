@@ -4,4 +4,10 @@ $(document).ready(function() {
         minlen: 10,
         addcopyfirst: false
     });
+
+    if ($('.validat').length) {
+        $('.validat').liValidForm({
+            captcha: 'code'
+        })
+    }
 });
