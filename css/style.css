@@ -20,8 +20,8 @@
     small{font-size:80%}
     big{font-size:125%}
     sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
-    sup{top:-.5em}
-    sub{bottom:-.25em}
+    sup{top:-.5em; left: -0.3em;}
+    sub{bottom:-.25em; left: -0.3em;}
     abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}
     ins,u{text-decoration:underline}
     del,s{text-decoration:line-through}
