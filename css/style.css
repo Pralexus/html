@@ -25,7 +25,7 @@
     abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}
     ins,u{text-decoration:underline}
     del,s{text-decoration:line-through}
-    dl,menu,ol,ul{margin:1em 0 1em 1em;list-style:none}
+    dl,menu{margin:1em 0 1em 1em;list-style:none}
     dd+dt{margin-top:1em}
     dd{margin:0 0 0 40px}
     nav ol,nav ul{list-style:none}
