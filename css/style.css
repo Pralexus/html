@@ -28,7 +28,7 @@
     dl,menu{margin:1em 0 1em 1em;list-style:none}
     dd+dt{margin-top:1em}
     dd{margin:0 0 0 40px}
-    nav ol,nav ul{list-style:none}
+    nav ol,nav ul, ol, ul {list-style:none}
     table{width:100%;border-collapse:collapse;border-spacing:0}
     td,td img{vertical-align:top}
     ::selection{text-shadow:none;color:#fff;background:#2597ff}
