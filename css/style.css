@@ -54,7 +54,7 @@
 
     html, body {height: 100%;margin: 0;padding: 0;}
     html {display: block;font-family: sans-serif;font-size: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
-    body {position: relative;min-width: 980px;font: 14px/1.6em Arial,Helvetica,sans-serif;color: #555;background: #fff;-webkit-backface-visibility: hidden;}
+    body {position: relative;min-width: 980px;font: 14px/1.6em Arial,Helvetica,sans-serif;color: #555;background: #fff;-webkit-backface-visibility: hidden;-webkit-font-smoothing: antialiased;}
 
     input[type="text"],input[type="password"],input[type="submit"],input[type="tel"],input[type="email"],textarea {-webkit-appearance: none;-webkit-border-radius:0;border-radius:0;}
     input[type="text"]:focus,input[type="tel"]:focus,input[type="email"]:focus,textarea:focus,input[type="password"]:focus {background: #ffface !important;}
