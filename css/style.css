@@ -75,16 +75,13 @@
     .clear { clear: both;}
     .helper {display:inline-block; height:100%; width:0px; vertical-align:middle; zoom:1; font-size:0; }
     #ctrlcopy { height:1px; overflow:hidden; position:absolute; width:1px; margin: 5px 0 0 -1px; line-height:0; opacity: 0; }
-
     .clearFix:after { content: ''; display: block; clear: both; height: 0; }
     .wSize:after { content: ''; display: block; clear: both; height: 0; }
-
     .content { position: relative; }
-
-    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6,
-    .h1T, .h2T, .h3T, .h4T, .h5T, .h6T {
-        font: 40px/1.2em "Trebuchet MS", Arial, Helvetica, sans-serif;
+    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6,.h1T, .h2T, .h3T, .h4T, .h5T, .h6T {
+      font: 40px/1.2em "Trebuchet MS", Arial, Helvetica, sans-serif;
     }
+    .content h1:before, .content h2:before, .content h3:before, .content h4:before, .content h5:before, .content h6:before { content: ''; display: block; clear: both; height: 0; }
     .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
         padding-top: 0.5em;
         padding-bottom: 0.2em;
@@ -95,10 +92,8 @@
     .content h5, .h5T { font-size: 22px; line-height: 1.2em; }
     .content h6, .h6T { font-size: 18px; line-height: 1.2em; }
     .h1T *,.h2T *,.h3T *,.h4T *,.h5T *,.h6T * { line-height: 1em !important; }
-
     .content h1 a, .content h2 a, .content h3 a, .content h4 a, .content h5 a, .content h6 a,
     .h1T a, .h2T a, .h3T a, .h4T a, .h5T a, .h6T a { text-decoration: none !important; }
-
     .content blockquote { padding: 5px 20px; margin: 5px 0; font-style: italic; border: 10px solid transparent; border-left-color: #ccc; }
     .content a { color: #00f; }
     .content a:hover { color: #3c3; }

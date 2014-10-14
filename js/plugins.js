@@ -1,24 +1,21 @@
 /*-------------------------------  main.js  ------------------------------------*/
     $(document).ready(function() {
-        $('.file').each(function() {
-            var f = $(this);
-            var fileItem = f.closest('.file_item');
-            var fakeBut = $('.fakebut', fileItem);
-            var rightPos = fileItem.width() - (fakeBut.position().left + fakeBut.outerWidth());
-            f.css({
-                right: rightPos
-            });
-        });
+        if (navigator.vendor === 'Apple Computer, Inc.') {
+            $('html').addClass('safari');
+            if ((navigator.platform).slice(0, 3) === 'Win') {
+                $('html').addClass('safari-win');
+            }
+        }
 
-        $(document).on('change', '.file', function() {
-            var item_wrap = $(this).closest('.row');
-            var file = $(this).val();
-            var reWin = /.*\\(.*)/;
-            var fileTitle = file.replace(reWin, "$1");
-            var reUnix = /.*\/(.*)/;
-            var fileTitle = fileTitle.replace(reUnix, "$1");
-            $('.fakefile input', item_wrap).val(fileTitle);
-        });
+        if (document.all) {
+            $('html').addClass('ie');
+            if (document.all && !document.addEventListener) {
+                $('html').addClass('ie8');
+            } else if (document.all && !window.atob) {
+                $('html').addClass('ie9');
+            }
+        }
+
 
         if (!Modernizr.input.placeholder) {
             $('input[placeholder]').each(function() {
