@@ -1,20 +1,31 @@
 /*-------------------------------  main.js  ------------------------------------*/
     $(document).ready(function() {
-        if (navigator.vendor === 'Apple Computer, Inc.') {
-            $('html').addClass('safari');
-            if ((navigator.platform).slice(0, 3) === 'Win') {
-                $('html').addClass('safari-win');
-            }
-        }
+        var isFirefox = typeof InstallTrigger !== 'undefined';
+        var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+        var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+        var isChrome = !!window.chrome && !isOpera;
+        var isIE = /*@cc_on!@*/ false || document.documentMode;
 
-        if (document.all) {
-            $('html').addClass('ie');
+        if (isFirefox) {
+            $('html').addClass('moz no-ie no-webkit no-chrome no-safari no-o');
+        } else if (isChrome) {
+            $('html').addClass('webkit chrome no-moz no-ie no-safari no-o');
+        } else if (isOpera) {
+            $('html').addClass('webkit o no-moz no-ie no-chrome no-safari');
+        } else if (isSafari) {
+            $('html').addClass('webkit safari no-moz no-ie no-chrome no-o');
+            ((navigator.platform).slice(0, 3) === 'Win') ? $('html').addClass('safari-win') : $('html').addClass('safari-nowin');
+        } else if (isIE) {
+            $('html').addClass('ie no-moz no-webkit no-chrome no-safari no-o');
             if (document.all && !document.addEventListener) {
                 $('html').addClass('ie8');
             } else if (document.all && !window.atob) {
                 $('html').addClass('ie9');
+            } else if (document.all) {
+                $('html').addClass('ie10');
             }
         }
+        ((navigator.platform).slice(0, 3) === 'Win') ? $('html').addClass('win') : $('html').addClass('nowin');
 
 
         if (!Modernizr.input.placeholder) {

@@ -1,287 +1,217 @@
 /*-------------------------------  @media print  ------------------------------------*/
-  @media print {
-          * {
-              text-shadow: none !important;
-              color: #000 !important;
-              background: transparent !important;
-              box-shadow: none !important;
-          }
-          
-          a, a:visited {
-              text-decoration: underline;
-          }
-          
-          a[href]:after {
-              content: " (" attr(href) ") ";
-          }
-          
-          abbr[title]:after {
-              content: " (" attr(title) ") ";
-          }
-          
-          a[href^="javascript:"]:after, a[href^="#"]:after {
-              content: "";
-          }
-          
-          pre, blockquote {
-              border: 1px solid #999;
-              page-break-inside: avoid;
-          }
-          
-          thead {
-              display: table-header-group;
-          }
-          
-          tr, img {
-              page-break-inside: avoid;
-          }
-          
-          img {
-              max-width: 100% !important;
-          }
-          
-          @page {
-              margin: 0.5cm;
-          }
-          
-          p, h2, h3 {
-              orphans: 3;
-              widows: 3;
-          }
-          
-          h2, h3 {
-              page-break-after: avoid;
-          }
-      }
+    @media print {
+        * {
+            text-shadow: none !important;
+            color: #000 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+        a, a:visited {text-decoration: underline;}
+        a[href]:after {content: " (" attr(href) ") ";}
+        abbr[title]:after {content: " (" attr(title) ") ";}
+        a[href^="javascript:"]:after, a[href^="#"]:after {content: "";}
+        pre, blockquote {border: 1px solid #999; page-break-inside: avoid;}
+        thead {display: table-header-group;}
+        tr, img {page-break-inside: avoid;}
+        img {max-width: 100% !important;}
+        @page {margin: 0.5cm;}
+        p, h2, h3 {orphans: 3; widows: 3;}
+        h2, h3 {page-break-after: avoid;}
+    }
 /*---------------------------------- liValid ----------------------------*/
-  .validat .mand {
-    color: #f00 !important;
-  }
-
-  .validat .r {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 6px;
-    vertical-align: top;
-  }
-
-  .validat .indicator {
-    border-color: #ee5f5b;
-    color: #b94a48;
-  }
-
-  .validat input[type=checkbox].indicator, .validat input[type=radio].indicator {
-    outline: 1px solid red;
-  }
-
-  .validat .indicator:focus {
-    border-color: #e9322d;
-    box-shadow: 0 0 6px #f8b9b7;
-  }
-
-  .validat .psevdo_but {
-    border-color: #ddd !important;
-    color: #999 !important;
-    background: #fff;
-    cursor: not-allowed !important;
-  }
-
-  .validat .disabled {
-    cursor: not-allowed !important;
-  }
-
-  .validat .errorBox {
-    font: 11px/1.2em Arial,Helvetica,sans-serif;
-    color: red;
-  }
-
-  .validat .captchaView {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 11px;
-    color: green;
-    background: #cccccc;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjY2NjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk4JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-    background: -moz-linear-gradient(top,#cccccc 0,#ffffff 98%);
-    background: -webkit-linear-gradient(top,#cccccc 0,#ffffff 98%);
-    background: -ms-linear-gradient(top,#cccccc 0,#ffffff 98%);
-    background: linear-gradient(to bottom,#cccccc 0,#ffffff 98%);
-  }
-
-  .form_style .but {
-    display: inline-block;
-    z-index: 1;
-    position: relative;
-    width: auto;
-    height: 22px;
-    margin: 0;
-    padding: 4px 10px;
-    border: 1px solid #afafaf;
-    border-radius: 3px;
-    text-decoration: none;
-    font: 700 12px/20px Tahoma,Geneva,sans-serif;
-    vertical-align: top;
-    vertical-align: bottom;
-    color: #333;
-    background: url(../pic/but_bg.gif) 0 50% repeat-x;
-    box-shadow: 0 2px 4px #ccc;
-    cursor: pointer;
-  }
-
-  .form_style input.but {
-    height: 32px;
-    padding: 3px 20px 5px;
-  }
-
-  .but:hover, .form_style .but:hover {
-    border: 1px solid #b9b9c3;
-    text-decoration: none;
-    color: #000;
-    background: #fff;
-  }
-
-  .form_style .row {
-    position: relative;
-    height: 1%;
-    padding: 0 0 5px 0;
-  }
-
-  .form_style .row:after {
-    content: '.';
-    display: block;
-    visibility: hidden;
-    clear: both;
-    height: 0;
-  }
-
-  .form_style {
-    display: block;
-    margin: 0 auto;
-    max-width: 500px;
-  }
-
-  .form_style label {
-    display: block;
-    position: relative;
-    padding: 2px 0 0 0;
-    vertical-align: top;
-  }
-
-  .form_style label.t_radio {
-    float: none;
-    width: auto !important;
-    margin: 0;
-    padding: 0;
-  }
-
-  .form_style label.t_radio input {
-    margin-right: 5px;
-  }
-
-  .form_style input, .form_style textarea, .form_style select {
-    display: inline-block;
-    box-sizing: border-box;
-    height: 30px;
-    padding: 2px 5px;
-    border: 1px solid #ccc;
-    font: 13px/18px Arial,Helvetica,sans-serif;
-    vertical-align: top;
-    color: #5e6363;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset;
-    -webkit-transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
-    -moz-transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
-    transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
-  }
-
-  .form_style .controls {
-    position: relative;
-  }
-
-  .form_style .refreshCptcha {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    text-indent: -99999px;
-    vertical-align: middle;
-    opacity: 0.5;
-    background: url(../pic/refresh.png) 0 0 no-repeat;
-  }
-
-  .form_style .refreshCptcha:hover {
-    opacity: 1;
-  }
-
-  .form_style .captchaPic {
-    display: inline-block;
-    margin: 0;
-    border: 0;
-    vertical-align: middle;
-  }
-
-  .form_style .captchaInput {
-    width: auto !important;
-    text-align: center;
-    font-size: 16px !important;
-  }
-
-  .form_style input[type="text"], .form_style input[type="password"], .form_style textarea, .form_style select {
-    width: 100%;
-  }
-
-  .validat input[type=checkbox], .validat input[type=radio] {
-    height: auto !important;
-  }
-
-  .form_style input[type="file"] {
-    height: 27px;
-    line-height: 27px;
-  }
-
-  .form_style input:focus, .form_style textarea:focus {
-    border-color: rgba(82,168,236,0.8);
-    outline: 0;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1) ,0 0 8px rgba(82,168,236,0.6);
-  }
-
-  .form_style input[type=file]:focus, .form_style input[type=checkbox]:focus, .form_style select:focus {
-    outline: 1px dotted #666;
-    box-shadow: none;
-  }
-
-  .form_style textarea {
-    height: auto;
-    margin: 0;
-  }
-
-  .form_style input, .form_style textarea {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset;
-    transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
-  }
-
-  .form_style .row table {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .form_style .row table td {
-    padding: 0 10px 0 0;
-    vertical-align: top;
-  }
-
-  .form_style .row table td .update_captcha {
-    margin: 0 0 0 5px;
-    text-align: left;
-  }
-
-  .form_style #image {
-    height: 28px;
-    margin: 0 0 0 5px !important;
-  }
-
-  .form_style .help {
-    font: 11px/1.2em Arial,Helvetica,sans-serif;
-    color: green;
-  }
+    .validat .mand {
+        color: #f00 !important;
+    }
+    .validat .r {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
+        width: 6px;
+    }
+    .validat .indicator {
+        border-color: #ee5f5b;
+        color: #b94a48;
+    }
+    .validat input[type=checkbox].indicator, .validat input[type=radio].indicator {
+        outline: 1px solid red;
+    }
+    .validat .indicator:focus {
+        border-color: #e9322d;
+        box-shadow: 0 0 6px #f8b9b7;
+    }
+    .validat .psevdo_but {
+        border-color: #ddd !important;
+        color: #999 !important;
+        background: #fff;
+        cursor: not-allowed !important;
+    }
+    .validat .disabled {
+        cursor: not-allowed !important;
+    }
+    .validat .errorBox {
+        font: 11px/1.2em Arial,Helvetica,sans-serif;
+        color: red;
+    }
+    .validat .captchaView {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 11px;
+        color: green;
+        background: #cccccc;
+        background: -moz-linear-gradient(top,#cccccc 0,#ffffff 98%);
+        background: -webkit-linear-gradient(top,#cccccc 0,#ffffff 98%);
+        background: -ms-linear-gradient(top,#cccccc 0,#ffffff 98%);
+        background: linear-gradient(to bottom,#cccccc 0,#ffffff 98%);
+    }
+    .form_style .but {
+        display: inline-block;
+        z-index: 1;
+        position: relative;
+        width: auto;
+        height: 22px;
+        margin: 0;
+        padding: 4px 10px;
+        border: 1px solid #afafaf;
+        border-radius: 3px;
+        text-decoration: none;
+        font: 700 12px/20px Tahoma,Geneva,sans-serif;
+        vertical-align: top;
+        vertical-align: bottom;
+        color: #333;
+        background: url(../pic/but_bg.gif) 0 50% repeat-x;
+        box-shadow: 0 2px 4px #ccc;
+        cursor: pointer;
+    }
+    .form_style input.but {
+        height: 32px;
+        padding: 3px 20px 5px;
+    }
+    .but:hover, .form_style .but:hover {
+        border: 1px solid #b9b9c3;
+        text-decoration: none;
+        color: #000;
+        background: #fff;
+    }
+    .form_style .row {
+        position: relative;
+        height: 1%;
+        padding: 0 0 5px 0;
+    }
+    .form_style .row:after {
+        content: '.';
+        display: block;
+        visibility: hidden;
+        clear: both;
+        height: 0;
+    }
+    .form_style {
+        display: block;
+        margin: 0 auto;
+        max-width: 500px;
+    }
+    .form_style .label {
+        display: block;
+        position: relative;
+        padding: 2px 0 0 0;
+        vertical-align: top;
+    }
+    .form_style .t_radio {
+        float: none;
+        width: auto !important;
+        margin: 0;
+        padding: 0;
+    }
+    .form_style .t_radio input {
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .form_style input, .form_style textarea, .form_style select {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 30px;
+        padding: 2px 5px;
+        border: 1px solid #ccc;
+        font: 13px/18px Arial,Helvetica,sans-serif;
+        vertical-align: top;
+        color: #5e6363;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset;
+        -webkit-transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
+        transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
+    }
+    .form_style .controls {
+        position: relative;
+    }
+    .form_style .refreshCptcha {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        text-indent: -99999px;
+        vertical-align: middle;
+        opacity: 0.5;
+        background: url(../pic/refresh.png) 0 0 no-repeat;
+    }
+    .form_style .refreshCptcha:hover {
+        opacity: 1;
+    }
+    .form_style .captchaPic {
+        display: inline-block;
+        margin: 0;
+        border: 0;
+        vertical-align: middle;
+    }
+    .form_style .captchaInput {
+        width: auto !important;
+        text-align: center;
+        font-size: 16px !important;
+    }
+    .form_style input[type="tel"], .form_style input[type="email"], .form_style input[type="text"], .form_style input[type="password"], .form_style textarea, .form_style select {
+        width: 100%;
+    }
+    .validat input[type=checkbox], .validat input[type=radio] {
+        height: auto !important;
+    }
+    .form_style input[type="file"] {
+        height: 27px;
+        line-height: 27px;
+    }
+    .form_style input:focus, .form_style textarea:focus {
+        border-color: rgba(82,168,236,0.8);
+        outline: 0;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,0.1) ,0 0 8px rgba(82,168,236,0.6);
+    }
+    .form_style input[type=file]:focus, .form_style input[type=checkbox]:focus, .form_style select:focus {
+        /* outline: 1px dotted #666; */
+        box-shadow: none;
+    }
+    .form_style textarea {
+        height: 150px;
+        resize: none;
+        margin: 0;
+    }
+    .form_style input, .form_style textarea {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1) inset;
+        -webkit-transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
+        transition: border 0.2s linear 0s,box-shadow 0.2s linear 0s;
+    }
+    .form_style .row table {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .form_style .row table td {
+        padding: 0 10px 0 0;
+        vertical-align: top;
+    }
+    .form_style .row table td .update_captcha {
+        margin: 0 0 0 5px;
+        text-align: left;
+    }
+    .form_style #image {
+        height: 28px;
+        margin: 0 0 0 5px !important;
+    }
+    .form_style .help {
+        font: 11px/1.2em Arial,Helvetica,sans-serif;
+        color: green;
+    }
