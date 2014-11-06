@@ -85,7 +85,7 @@
     .clearFix:after { content: ''; display: block; clear: both; height: 0; }
     .wSize:after { content: ''; display: block; clear: both; height: 0; }
     .content { position: relative; }
-    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6,.h1T, .h2T, .h3T, .h4T, .h5T, .h6T {
+    h1, h2, h3, h4, h5, h6,.h1T, .h2T, .h3T, .h4T, .h5T, .h6T {
       font: 40px/1.2em "Trebuchet MS", Arial, Helvetica, sans-serif;
     }
     .content h1:before, .content h2:before, .content h3:before, .content h4:before, .content h5:before, .content h6:before { content: ''; display: block; clear: both; height: 0; }
