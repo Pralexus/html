@@ -548,10 +548,53 @@ window.Modernizr = (function(window, document, undefined) {
         return !!document.createElementNS && /SVGAnimate/.test(toString.call(document.createElementNS(ns.svg, 'animate')));
     };
 
-
     tests['svgclippaths'] = function() {
         return !!document.createElementNS && /SVGClipPath/.test(toString.call(document.createElementNS(ns.svg, 'clipPath')));
     };
+
+    // retina test
+
+    tests['retina'] = function() {
+        var dpr = window.devicePixelRatio || (window.screen.deviceXDPI / window.screen.logicalXDPI) || 1;
+        return !!(dpr > 1);
+    };
+
+    // @wezom browser test's
+
+    tests['moz'] = function() {
+        return typeof InstallTrigger !== 'undefined';
+    };
+    tests['safari'] = function() {
+        return Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+    };
+    if (Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0) {
+        tests['safari-win'] = function() {
+            return ((navigator.platform).slice(0, 3) === 'Win') ? true : false;
+        };
+    }
+    tests['o'] = function() {
+        return !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    };
+    tests['chrome'] = function() {
+        return !!window.chrome && !window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    };
+    tests['webkit'] = function() {
+        return !!window.WebKitPoint;
+    };
+    tests['ie'] = function() {
+        return /*@cc_on!@*/ false || document.documentMode;
+    };
+    if (( /*@cc_on!@*/ false || document.documentMode)) {
+        tests['ie8'] = function() {
+            return (document.all && !document.addEventListener);
+        };
+        tests['ie9'] = function() {
+            return (document.all && !window.atob && !!document.addEventListener);
+        };
+        tests['ie10'] = function() {
+            return (document.all && !!window.atob && !!document.addEventListener);
+        };
+    }
 
     function webforms() {
         Modernizr['input'] = (function(props) {

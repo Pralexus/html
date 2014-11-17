@@ -80,37 +80,35 @@
     .flr { float: right; }
     .cls { font-size: 0; display: table; width: 100%;}
     .clear { clear: both;}
-    .helper {display:inline-block; height:100%; width:0px; vertical-align:middle; zoom:1; font-size:0; }
-    #ctrlcopy { height:1px; overflow:hidden; position:absolute; width:1px; margin: 5px 0 0 -1px; line-height:0; opacity: 0; }
     .clearFix:after { content: ''; display: block; clear: both; height: 0; }
     .wSize:after { content: ''; display: block; clear: both; height: 0; }
-    .content { position: relative; }
+    .wTxt { position: relative; }
     h1, h2, h3, h4, h5, h6,.h1T, .h2T, .h3T, .h4T, .h5T, .h6T {
       font: 40px/1.2em "Trebuchet MS", Arial, Helvetica, sans-serif;
     }
-    .content h1:before, .content h2:before, .content h3:before, .content h4:before, .content h5:before, .content h6:before { content: ''; display: block; clear: both; height: 0; }
-    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    .wTxt h1:before, .wTxt h2:before, .wTxt h3:before, .wTxt h4:before, .wTxt h5:before, .wTxt h6:before { content: ''; display: block; clear: both; height: 0; }
+    .wTxt h1, .wTxt h2, .wTxt h3, .wTxt h4, .wTxt h5, .wTxt h6 {
         padding-top: 0.5em;
         padding-bottom: 0.2em;
     }
-    .content h2, .h2T { font-size: 34px; line-height: 1.2em; }
-    .content h3, .h3T { font-size: 30px; line-height: 1.2em; }
-    .content h4, .h4T { font-size: 26px; line-height: 1.2em; }
-    .content h5, .h5T { font-size: 22px; line-height: 1.2em; }
-    .content h6, .h6T { font-size: 18px; line-height: 1.2em; }
+    .wTxt h2, .h2T { font-size: 34px; line-height: 1.2em; }
+    .wTxt h3, .h3T { font-size: 30px; line-height: 1.2em; }
+    .wTxt h4, .h4T { font-size: 26px; line-height: 1.2em; }
+    .wTxt h5, .h5T { font-size: 22px; line-height: 1.2em; }
+    .wTxt h6, .h6T { font-size: 18px; line-height: 1.2em; }
     .h1T *,.h2T *,.h3T *,.h4T *,.h5T *,.h6T * { line-height: 1em !important; }
-    .content h1 a, .content h2 a, .content h3 a, .content h4 a, .content h5 a, .content h6 a,
+    .wTxt h1 a, .wTxt h2 a, .wTxt h3 a, .wTxt h4 a, .wTxt h5 a, .wTxt h6 a,
     .h1T a, .h2T a, .h3T a, .h4T a, .h5T a, .h6T a { text-decoration: none !important; }
-    .content blockquote { padding: 5px 20px; margin: 5px 0; font-style: italic; border: 10px solid transparent; border-left-color: #ccc; }
-    .content a { color: #00f; }
-    .content a:hover { color: #3c3; }
-    .content p { margin-bottom: 1em; }
-    .content ul, .content ol { margin-top: 0; }
-    .content li { list-style-type: disc; list-style-position: inside; }
-    .content ol li { list-style-type: decimal; list-style-position: inside; }
-    .content table th { font-weight: bold; background: #eee; }
-    .content table thead th { vertical-align: bottom; }
-    .content table  {
+    .wTxt blockquote { padding: 5px 20px; margin: 5px 0; font-style: italic; border: 10px solid transparent; border-left-color: #ccc; }
+    .wTxt a { color: #00f; }
+    .wTxt a:hover { color: #3c3; }
+    .wTxt p { margin-bottom: 1em; }
+    .wTxt ul, .wTxt ol { margin-top: 0; }
+    .wTxt li { list-style-type: disc; list-style-position: inside; }
+    .wTxt ol li { list-style-type: decimal; list-style-position: inside; }
+    .wTxt table th { font-weight: bold; background: #eee; }
+    .wTxt table thead th { vertical-align: bottom; }
+    .wTxt table  {
         width: 100%;
         background-color: transparent;
         border-collapse: collapse;
@@ -120,7 +118,7 @@
         width: 100%;
         margin: 10px 0 20px;
     }
-    .content table th, .content table td {
+    .wTxt table th, .wTxt table td {
         padding: 10px;
         line-height: 1em;
         text-align: left;
@@ -129,9 +127,9 @@
         border-right: 1px solid #333;
     }
 
-    .content table.table-null, .content table.table-null th, .content table.table-null td { border-color: transparent; }
-    .content table.table-zebra, .content table.table-zebra th, .content table.table-zebra td { border-color: transparent; }
-    .content table.table-zebra tr:nth-child(even) { background: #ddd; }
+    .wTxt table.table-null, .wTxt table.table-null th, .wTxt table.table-null td { border-color: transparent; }
+    .wTxt table.table-zebra, .wTxt table.table-zebra th, .wTxt table.table-zebra td { border-color: transparent; }
+    .wTxt table.table-zebra tr:nth-child(even) { background: #ddd; }
 /*-------------------------------  conteiner  ------------------------------------*/
     .wWrapper {
         min-height: 100%;
