@@ -151,14 +151,6 @@
         padding: 20px 0 100px 0;
         position: relative;
     }
-    .defBlock {
-        background: #999;
-        height: 100px;
-        text-align: center;
-        font: 20px/98px Arial, Helvetica, sans-serif;
-        color: #fff;
-        text-transform: uppercase;
-    }
 /*-------------------------------  breadcrumbs  ------------------------------------*/
     .breadcrumbs {
         font-size: 0;
