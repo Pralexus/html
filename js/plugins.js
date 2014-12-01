@@ -1911,13 +1911,8 @@
             return $.trim( value ).length > 0;
         },
 
-        // http://jqueryvalidation.org/email-method/
         email: function( value, element ) {
-            // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
-            // Retrieved 2014-01-14
-            // If you have a problem with this implementation, report a bug against the above spec
-            // Or use custom methods to implement your own email validation
-            return this.optional( element ) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
+            return this.optional( element ) || /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test( value );
         },
 
         // http://jqueryvalidation.org/url-method/
@@ -1944,6 +1939,10 @@
         // http://jqueryvalidation.org/digits-method/
         digits: function( value, element ) {
             return this.optional( element ) || /^\d+$/.test( value );
+        },
+
+        phoneUA: function( value, element, param ) {
+            return this.optional(element) || /^([+]38)?([0-9]{3})([\d]{7})$/.test(value);
         },
 
         // http://jqueryvalidation.org/creditcard-method/
