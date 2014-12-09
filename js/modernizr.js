@@ -1,5 +1,8 @@
 /* Modernizr 2.7.1 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-borderradius-boxshadow-flexbox-flexboxlegacy-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-canvas-canvastext-draganddrop-hashchange-history-audio-video-indexeddb-input-inputtypes-localstorage-postmessage-sessionstorage-websockets-websqldatabase-webworkers-geolocation-inlinesvg-smil-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_calc-load
+ *
+ * rePack WEZOM | Oleg Dutchenko | 07.11.2014
+ *
  */
 ;
 
@@ -579,7 +582,7 @@ window.Modernizr = (function(window, document, undefined) {
         return !!window.chrome && !window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
     };
     tests['webkit'] = function() {
-        return !!window.WebKitPoint;
+        return (navigator.appVersion.indexOf("Win")!=-1) && ('WebkitAppearance' in document.documentElement.style);
     };
     tests['ie'] = function() {
         return /*@cc_on!@*/ false || document.documentMode;
@@ -594,6 +597,46 @@ window.Modernizr = (function(window, document, undefined) {
         tests['ie10'] = function() {
             return (document.all && !!window.atob && !!document.addEventListener);
         };
+    }
+
+    // @wezom device tests
+    var vendors = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i);
+    if (vendors != null && vendors[0].length) {
+        var vName = vendors[0];
+        tests[vName] = function() {
+            return true;
+        };
+        var vObj = {
+            Android: [
+                ['Android 2.', '2'],
+                ['Android 3.', '3'],
+                ['Android 4.', '4'],
+                ['Android 5.', '5'],
+                ['Android 6.', '6']
+            ],
+            iPad: [
+                ['OS 4', '2'],
+                ['OS 7', '4']
+            ],
+            iPhone: [
+                ['OS 4', '4'],
+                ['OS 7', '5'],
+                ['OS 8', '6']
+            ],
+            Tablet: [
+                ['OS 1', '1'],
+                ['OS 2', '2']
+            ]
+        };
+        if (!!vObj[vName]) {
+            for (var i = 0; i < vObj[vName].length; i++) {
+                if (navigator.userAgent.match(vObj[vName][i][0])) {
+                    tests[vName + '' + vObj[vName][i][1]] = function() {
+                        return true;
+                    };
+                }
+            };
+        }
     }
 
     function webforms() {
