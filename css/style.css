@@ -101,9 +101,6 @@
         position: relative;
         overflow: hidden;
     }
-    .wHeader {
-        position: relative;
-    }
     .wSize {
         width: 980px;
         padding: 0 5px;
@@ -123,7 +120,7 @@
         display: inline-block;
         vertical-align: top;
         position: relative;
-        font: 14px/14px Arial,sans-serif;
+        font: 14px/14px Arial, Helvetica, sans-serif;
     }
     .breadcrumbs span + span {
         padding-left: 20px;
@@ -140,7 +137,10 @@
     .breadcrumbs a {
         text-decoration: underline;
     }
-/*-------------------------------  wHeader  ------------------------------------*/  
+/*-------------------------------  wHeader  ------------------------------------*/
+    .wHeader {
+        position: relative;
+    }
 /*-------------------------------  wConteiner  ------------------------------------*/
     /*-------------------------------  wLeft  ------------------------------------*/
         .wLeft {
