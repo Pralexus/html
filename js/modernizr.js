@@ -600,7 +600,7 @@ window.Modernizr = (function(window, document, undefined) {
     }
 
     // @wezom device tests
-    var vendors = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i);
+    var vendors = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tv|tablet|opera mini|nexus 7)/i);
     if (vendors != null && vendors[0].length) {
         var vName = vendors[0];
         tests[vName] = function() {
@@ -626,14 +626,23 @@ window.Modernizr = (function(window, document, undefined) {
             Tablet: [
                 ['OS 1', '1'],
                 ['OS 2', '2']
+            ],
+            Mobi: [
+                ['Windows Phone', 'windows-phone']
             ]
         };
         if (!!vObj[vName]) {
             for (var i = 0; i < vObj[vName].length; i++) {
                 if (navigator.userAgent.match(vObj[vName][i][0])) {
-                    tests[vName + '' + vObj[vName][i][1]] = function() {
-                        return true;
-                    };
+                    if (vObj[vName][i][0] === 'Windows Phone') {
+                        tests[vObj[vName][i][1]] = function() {
+                            return true;
+                        };
+                    } else {
+                        tests[vName + '' + vObj[vName][i][1]] = function() {
+                            return true;
+                        };
+                    }
                 }
             };
         }
