@@ -42,8 +42,8 @@
     ::-webkit-textarea-placeholder {color: #ccc;}
     input::-moz-placeholder {color: #ccc;opacity: 1;}
     textarea::-moz-placeholder {color: #ccc;opacity: 1;}
-    input::-ms-placeholder {color: #ccc;}
-    textarea::-ms-placeholder {color: #ccc;} 
+    input:-ms-input-placeholder {color: #ccc;}
+    textarea:-ms-input-placeholder {color: #ccc;} 
 
     button, html input[type="button"], input[type="reset"], input[type="submit"] {-webkit-appearance: button;cursor: pointer;}
     button[disabled], html input[disabled] {cursor: not-allowed;}
