@@ -562,6 +562,7 @@
         date: "Пожалуйста, введите верную дату.",
         dateISO: "Please enter a valid date ( ISO ).",
         number: "Пожалуйста, введите верное число.",
+        word: "Пожалуйста, введите только буквы.",
         digits: "Пожалуйста, вводите только числа.",
         creditcard: "Please enter a valid credit card number.",
         equalTo: "Пожалуйста, введите значение снова.",
@@ -1391,6 +1392,10 @@
         // http://jqueryvalidation.org/number-method/
         number: function( value, element ) {
             return this.optional( element ) || /^-?(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/.test( value );
+        },
+
+        word: function( value, element ) {
+            return this.optional( element ) || /^[a-zA-Zа-яА-Я ]*$/.test( value );
         },
 
         // http://jqueryvalidation.org/digits-method/
