@@ -1407,8 +1407,19 @@
             return this.optional(element) || /^([+]38)?([0-9]{3})([\d]{7})$/.test(value);
         },
 
-        // http://jqueryvalidation.org/creditcard-method/
-        // based on http://en.wikipedia.org/wiki/Luhn/
+        validTrue: function( value, element, param ) {
+            if($(element).data('valid') === true) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+
+        filesize: function(value, element, param) {
+        // param = size (en bytes) 
+            return this.optional( element ) || (element.files[0].size <= param);
+        },
+
         creditcard: function( value, element ) {
             if ( this.optional( element ) ) {
                 return "dependency-mismatch";
