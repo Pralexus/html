@@ -648,6 +648,13 @@ window.Modernizr = (function(window, document, undefined) {
         }
     }
 
+    var lenovo = navigator.userAgent.match(/(Lenovo)/i);
+    if (!!lenovo) {
+        tests['lenovo'] = function() {
+            return true;
+        };
+    }
+
     function webforms() {
         Modernizr['input'] = (function(props) {
             for (var i = 0, len = props.length; i < len; i++) {

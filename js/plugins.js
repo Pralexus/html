@@ -1421,7 +1421,11 @@
             },
 
             word: function( value, element ) {
-                return this.optional( element ) || /^[a-zA-Zа-яА-Я ]*$/.test( value );
+                return this.optional( element ) || /^[a-zA-Zа-яА-ЯіІїЇєЄґҐ ]*$/.test( value );
+            },
+
+            userName: function( value, element ) {
+                return this.optional( element ) || /^[a-zA-Zа-яА-ЯіІїЇєЄґҐ][0-9a-zA-Zа-яА-ЯіІїЇєЄґҐ ]+$/.test( value );
             },
 
             // http://jqueryvalidation.org/email-method/
