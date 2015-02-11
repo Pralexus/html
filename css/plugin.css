@@ -493,7 +493,7 @@
         padding-top: 0;
     }
     
-    .zoom-in #enterReg {
+    .zoom-in .zoomAnim {
         opacity: 0;
 
         -webkit-transition: all 0.2s ease-in-out; 
@@ -511,7 +511,7 @@
     }
 
     /* animate in */
-    .zoom-in.mfp-ready #enterReg {
+    .zoom-in.mfp-ready .zoomAnim {
         opacity: 1;
 
         -webkit-transform: scale(1); 
@@ -522,7 +522,7 @@
     }
 
     /* animate out */
-    .zoom-in.mfp-removing #enterReg {
+    .zoom-in.mfp-removing .zoomAnim {
         -webkit-transform: scale(0.8); 
         -moz-transform: scale(0.8); 
         -ms-transform: scale(0.8); 
