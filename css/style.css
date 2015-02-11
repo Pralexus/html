@@ -91,6 +91,7 @@
     }
     a {text-decoration: underline;color: #678bd8;}
     a:hover {text-decoration: underline;color: #d70017;}
+    a[href^="http"], a[href^="www."] { cursor: pointer; cursor: alias; }
 /*-------------------------------  Custom Fonts  ------------------------------------*/
 /*-------------------------------  conteiner  ------------------------------------*/
     .wWrapper {
