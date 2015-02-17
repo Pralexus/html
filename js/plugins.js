@@ -502,7 +502,7 @@
             errorClass: "error",
             validClass: "valid",
             errorElement: "label",
-            focusCleanup: true,
+            focusCleanup: false,
             focusInvalid: true,
             errorContainer: $( [] ),
             errorLabelContainer: $( [] ),
@@ -1430,7 +1430,7 @@
 
             // http://jqueryvalidation.org/email-method/
             email: function( value, element ) {
-                return this.optional( element ) || /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test( value );
+                return this.optional( element ) || /^([a-zA-Z0-9_\.\-]{2,})+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test( value );
             },
 
             // http://jqueryvalidation.org/url-method/
