@@ -27,8 +27,7 @@ $(document).ready(function() {
                 if (form.tagName === 'FORM') {
                     form.submit();
                 } else {
-                    /* Без тега FORM */
-                    console.warn('Without tag FORM');
+                    
                 }
             }
         });
