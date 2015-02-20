@@ -8,6 +8,7 @@
     fieldset{margin:0 2px;padding:.35em .625em .75em;border:1px solid silver}
     legend{white-space:normal}
     embed,img,object{max-width:100%}
+    img {height: auto;}
     b,dt,strong{font-weight:700}
     dfn,em,i{font-style:italic}
     blockquote,q{quotes:none;font-style:italic}
@@ -53,7 +54,7 @@
 
     html, body {height: 100%;margin: 0;padding: 0;}
     html {display: block;font-family: sans-serif;font-size: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
-
+    input:required, input:invalid {box-shadow:none;}
     input[type="text"],
     input[type="password"],
     input[type="submit"],
