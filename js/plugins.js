@@ -502,7 +502,7 @@
             errorClass: "error",
             validClass: "valid",
             errorElement: "label",
-            focusCleanup: true,
+            focusCleanup: false,
             focusInvalid: true,
             errorContainer: $( [] ),
             errorLabelContainer: $( [] ),
