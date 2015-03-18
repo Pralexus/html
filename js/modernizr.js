@@ -587,17 +587,16 @@ window.Modernizr = (function(window, document, undefined) {
     tests['ie'] = function() {
         return /*@cc_on!@*/ false || document.documentMode;
     };
-    if (( /*@cc_on!@*/ false || document.documentMode)) {
-        tests['ie8'] = function() {
-            return (document.all && !document.addEventListener);
-        };
-        tests['ie9'] = function() {
-            return (document.all && !window.atob && !!document.addEventListener);
-        };
-        tests['ie10'] = function() {
-            return (document.all && !!window.atob && !!document.addEventListener);
-        };
-    }
+
+    tests['ie8'] = function() {
+        return (document.all && !document.addEventListener);
+    };
+    tests['ie9'] = function() {
+        return (document.all && !window.atob && !!document.addEventListener);
+    };
+    tests['ie10'] = function() {
+        return (document.all && !!window.atob && !!document.addEventListener);
+    };
 
     // @wezom device tests
     var vendors = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tv|tablet|opera mini|nexus 7)/i);
@@ -1127,15 +1126,28 @@ window.Modernizr = (function(window, document, undefined) {
 Modernizr.load = function() {
     yepnope.apply(window, [].slice.call(arguments, 0));
 };
+
+// viewprot unit
+    Modernizr.addTest("viewport", function() {
+        var bool;
+
+        Modernizr.testStyles("#modernizr { width: 50vw; }", function(elem, rule) {
+            var width = parseInt(window.innerWidth / 2, 10),
+                compStyle = parseInt((window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle)["width"], 10);
+            bool = !!(compStyle == width);
+        });
+
+        return bool;
+    });
+
 // Method of allowing calculated values for length units, i.e. width: calc(100%-3em) http://caniuse.com/#search=calc
 // By @calvein
+    Modernizr.addTest('csscalc', function() {
+        var prop = 'width:';
+        var value = 'calc(10px);';
+        var el = document.createElement('div');
 
-Modernizr.addTest('csscalc', function() {
-    var prop = 'width:';
-    var value = 'calc(10px);';
-    var el = document.createElement('div');
+        el.style.cssText = prop + Modernizr._prefixes.join(value + prop);
 
-    el.style.cssText = prop + Modernizr._prefixes.join(value + prop);
-
-    return !!el.style.length;
-});;
+        return !!el.style.length;
+    });;

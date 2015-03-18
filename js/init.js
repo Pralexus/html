@@ -29,23 +29,16 @@ $(document).ready(function() {
                 } else {
                     $.ajax({
                         type: 'POST',
-                        url: $(form).attr('data-form-url'), /* path/to/file.php */
-                        data: $(form).find('select, textarea, input').serialize(),
-                        dataType : 'json',
+                        url: $(form).attr('data-form-url'), /* path/to/file.php */                        
+                        data: $(form).find('select, textarea, input').serializeArray(),
+                        dataType: 'json',
                         success: function(data) {
-                            // очистка полей формы
-                            // $(':input', form).not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
-
-                            // перезагрузка страницы
-                            // window.location.reload();
-
-                            //сообщение
-                            //
+                            
                         },
                         error: function() {
-                            console.error('Что то пошло не так!');
+                            console.error('Для верстальщика все ок :)');
                         }
-                    });                  
+                    });
                 }
             }
         });
