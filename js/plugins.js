@@ -1453,7 +1453,7 @@
             },
 
             word: function(value, element) {
-                return this.optional(element) || /^[a-zA-Zа-яА-ЯіІїЇєЄґҐ\'\` ]*$/.test(value);
+                return this.optional(element) || /^[a-zA-Zа-яА-ЯіІїЇєЄґҐ\'\`\- ]*$/.test(value);
             },
 
             login: function(value, element) {
