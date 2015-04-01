@@ -1452,6 +1452,11 @@
                 return this.optional(element) || (element.files[0].size <= param);
             },
 
+            filetype: function(value, element, param) {
+                param = typeof param === "string" ? param.replace(/,/g, "|") : "png|jpe?g|doc|pdf|gif|zip|rar|tar|html|swf|txt|xls|docx|xlsx|odt";
+                return this.optional(element) || value.match(new RegExp(".(" + param + ")$", "i"));
+            },
+
             word: function(value, element) {
                 return this.optional(element) || /^[a-zA-Zа-яА-ЯіІїЇєЄґҐ\'\`\- ]*$/.test(value);
             },
