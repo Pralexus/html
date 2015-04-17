@@ -1187,4 +1187,4 @@ Modernizr.addTest("viewport", function() {
         el.style.cssText = prop + Modernizr._prefixes.join(value + prop);
 
         return !!el.style.length;
-    });;
+    });; 
