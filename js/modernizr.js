@@ -1140,6 +1140,43 @@ Modernizr.load = function() {
         return bool;
     });
 
+// windows OS
+var winOS = [
+       ['win2000', '5.0'],
+       ['winxp', '5.1'],
+       ['winvista', '6.0'],
+       ['win7', '6.1'],
+       ['win8', '6.2'],
+       ['win10', '10']
+   ];
+
+for (var i = 0; i < winOS.length; i++) {
+   var tName = winOS[i][0];
+   var tVal = winOS[i][1];
+   Modernizr.addTest(tName, function() {
+       var ua = navigator.userAgent.toLowerCase();
+       var wos = ua.indexOf('windows nt '+tVal) > 0;
+       if (tName === 'win8' && !wos) {
+           wos = ua.indexOf('windows nt 6.3') > 0;
+       }
+       return wos;
+   });
+}
+
+// viewprot unit
+
+Modernizr.addTest("viewport", function() {
+   var bool;
+
+   Modernizr.testStyles("#modernizr { width: 50vw; }", function(elem, rule) {
+       var width = parseInt(window.innerWidth / 2, 10),
+           compStyle = parseInt((window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle)["width"], 10);
+       bool = !!(compStyle == width);
+   });
+
+   return bool;
+});
+
 // Method of allowing calculated values for length units, i.e. width: calc(100%-3em) http://caniuse.com/#search=calc
 // By @calvein
     Modernizr.addTest('csscalc', function() {
