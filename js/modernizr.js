@@ -284,7 +284,11 @@ window.Modernizr = (function(window, document, undefined) {
         return !!(Modernizr['canvas'] && is(document.createElement('canvas').getContext('2d').fillText, 'function'));
     };
 
-
+    tests['mobile'] = function() {
+       var mobile = navigator.userAgent.toLowerCase();
+       var bool = mobile.indexOf('mobile') > 0;
+       return bool;
+   };
 
     tests['webgl'] = function() {
         return !!window.WebGLRenderingContext;
@@ -1176,6 +1180,8 @@ Modernizr.addTest("viewport", function() {
 
    return bool;
 });
+
+
 
 // Method of allowing calculated values for length units, i.e. width: calc(100%-3em) http://caniuse.com/#search=calc
 // By @calvein
