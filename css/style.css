@@ -1,4 +1,4 @@
-﻿/*-------------------------------  reset  ------------------------------------*/
+/*-------------------------------  reset  ------------------------------------*/
     a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,
     fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,
     p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}
@@ -126,31 +126,33 @@
         position: relative;
     }
 /*-------------------------------  breadcrumbs  ------------------------------------*/
-    .breadcrumbs {
-        font-size: 0;
-        line-height: 0;
-    }
-    .breadcrumbs span {
-        display: inline-block;
-        vertical-align: top;
-        position: relative;
-        font: 14px/14px Arial, Helvetica, sans-serif;
-    }
-    .breadcrumbs span + span {
-        padding-left: 20px;
-    }
-    .breadcrumbs span + span:before {
-        content: '/';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20px;
-        height: 100%;
-        text-align: center;
-    }
-    .breadcrumbs a {
-        text-decoration: underline;
-    }
+.breadcrumbs {
+    margin-bottom: 15px;
+    font-size: 0;
+}
+
+.breadcrumbs span {
+    display: inline-block;
+    vertical-align: top;
+    font: 14px/18px Tahoma, Segoe, sans-serif;
+    color: #000;
+}
+
+.breadcrumbs span a {
+    color: #5b5b5b;
+    text-decoration: none;
+}
+
+.breadcrumbs span a:hover {
+    color: #cc2229;
+}
+
+.breadcrumbs span + span {
+    margin-left: 5px;
+    padding-left: 12px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAQAAACh8pzAAAAAMElEQVQIHWNgaGT4z3CAgYsBDFA4U4Ay20DC2gwvGb4yOIAYryAMBoZAhjQGY5AkALd8DFsMrlZbAAAAAElFTkSuQmCC) left 7px no-repeat;
+}
+
 /*-------------------------------  wHeader  ------------------------------------*/
     .wHeader {
         position: relative;
