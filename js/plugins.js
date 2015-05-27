@@ -109,11 +109,11 @@
             if ($(this[0]).is("form")) {
                 valid = this.validate().form();
             } else if ($(this[0]).is("div")) {
-                valid = this.validate().form();
+                valid = this.validate();
             } else {
                 errorList = [];
                 valid = true;
-                validator = $(this[0].form).validate();
+                validator = $(this[0]).validate();
                 this.each(function() {
                     valid = validator.element(this) && valid;
                     errorList = errorList.concat(validator.errorList);
