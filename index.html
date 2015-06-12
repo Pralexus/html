@@ -10,14 +10,17 @@
     <meta name="keywords" lang="ru-ru" content="студия wezom, разработка сайтов">
     <meta name="keywords" lang="en-us" content="studio wezom, web development">
     <meta name="author" lang="ru-ru" content="">
-
     <meta property="og:title" content="Заголовок страницы">
-    <meta property="og:type" content="website"> <!-- тип объекта - не изменять -->
-    <meta property="og:url" content="http://site.com/articles/example"> <!-- url текущей страницы -->
-    <meta property="og:image" content="http://site.com/pic/image.jpg"> <!-- изображение размером не менее 200х200 -->
-    <meta property="og:description" content="Short description text."> <!-- краткий текст (новости, товара и т.д) -->
-    <meta property="og:site_name" content="site.com"> <!-- домен сайта -->
-
+    <meta property="og:type" content="website">
+    <!-- тип объекта - не изменять -->
+    <meta property="og:url" content="http://site.com/articles/example">
+    <!-- url текущей страницы -->
+    <meta property="og:image" content="http://site.com/pic/image.jpg">
+    <!-- изображение размером не менее 200х200 -->
+    <meta property="og:description" content="Short description text.">
+    <!-- краткий текст (новости, товара и т.д) -->
+    <meta property="og:site_name" content="site.com">
+    <!-- домен сайта -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=1000">
     <!--[if IE]><meta http-equiv="imagetoolbar" content="no"><![endif]-->
@@ -74,6 +77,18 @@
 </head>
 
 <body>
+    <input type="checkbox" id="inputJSnoSCRIPT">
+        <div id="wrappJSnoSCRIPT">
+            <div id="blockJSnoSCRIPT">
+                <a id="logoJSnoSCRIPT" href="http://wezom.com.ua/" title="Студия Wezom" target="_blank">
+                    <img src="pic/logo-wezom-red.jpg" height="21" width="59" alt="Студия Wezom">
+                </a>
+                <div class="msgJSnoSCRIPT_p1">В Вашем браузере отключен JavaScript!</div>
+                <div class="msgJSnoSCRIPT_p2">Для работы с сайтом необходима поддержка Javascript.</div>
+                <div class="msgJSnoSCRIPT_p3">Мы рекомендуем Вам включить использование JavaScript в Вашем браузере.</div>
+            </div>
+            <label for="inputJSnoSCRIPT" id="closeJSnoSCRIPT" title="Закрыть это уведомление">&times;</label>
+        </div>
     <div class="wWrapper">
         <header class="wHeader">
             <div class="wSize">
@@ -103,6 +118,20 @@
         </div>
     </footer>
     <!-- .wFooter -->
+    <noscript>
+        <input type="checkbox" id="inputJSnoSCRIPT">
+        <div id="wrappJSnoSCRIPT">
+            <div id="blockJSnoSCRIPT">
+                <a id="logoJSnoSCRIPT" href="http://wezom.com.ua/" title="Студия Wezom" target="_blank">
+                    <img src="pic/logo-wezom-red.jpg" height="21" width="59" alt="Студия Wezom">
+                </a>
+                <div class="msgJSnoSCRIPT_p1">В Вашем браузере отключен JavaScript!</div>
+                <div class="msgJSnoSCRIPT_p2">Для работы с сайтом необходима поддержка Javascript.</div>
+                <div class="msgJSnoSCRIPT_p3">Мы рекомендуем Вам включить использование JavaScript в Вашем браузере.</div>
+            </div>
+            <label for="inputJSnoSCRIPT" id="closeJSnoSCRIPT" title="Закрыть это уведомление">&times;</label>
+        </div>
+    </noscript>
 </body>
 
 </html>
