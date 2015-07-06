@@ -1,69 +1,17 @@
 /*-------------------------------  NOSCRIPT  ------------------------------------*/
-    #wrappJSnoSCRIPT {
-        z-index: 9999;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        border-bottom: 2px solid #f7941d;
-        background: #feefda;
-    }
-
-    #wrappJSnoSCRIPT img {
-        border: none;
-    }
-
-    #blockJSnoSCRIPT {
-        position: relative;
-        margin: 0 auto;
-        padding: 10px 30px 20px 80px;
-        max-width: 700px;
-        text-transform: none;
-        font: 12px/1em sans-serif;
-        color: #000;
-    }
-
-    #logoJSnoSCRIPT {
-        display: block;
-        position: absolute;
-        top: 13px;
-        left: 10px;
-        width: 60px;
-        height: 21px;
-        line-height: 0;
-    }
-
-    .msgJSnoSCRIPT_p1 {
-        font-size: 14px;
-        font-weight: bold;
-        line-height: 1.2em;
-    }
-
-    .msgJSnoSCRIPT_p2 {
-        padding: 5px 0 10px;
-        font-weight: bold;
-    }
-
-    #closeJSnoSCRIPT {
-        display: block;
-        position: absolute;
-        top: 7px;
-        right: 7px;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #000;
-        line-height: 0;
-        cursor: pointer;
-        font: 700 20px/16px Arial, Helvetica, sans-serif;
-        color: #000;
-        text-align: center;
-    }
-
-    #inputJSnoSCRIPT,
-    #inputJSnoSCRIPT:checked + #wrappJSnoSCRIPT {
-        display: none;
-    }
+    .wzmMsg_Wrapp {z-index:9998;position:fixed;top:0;left:0;width:100%;height:auto;margin:0;padding:0 0 3px;border-bottom:1px solid #ababab;overflow:visible;font-family:sans-serif;font-size:12px;font-style:normal;font-weight:normal;line-height:14px;color:#000;background-color:#fcea9c;-webkit-backface-visibility:hidden;-webkit-user-select:none;-moz-user-select:none;user-select:none;-ms-user-select:none;}
+    .wzmMsg_Text {margin-left:70px;padding:0 30px 0 10px;min-height:20px;border-left:1px solid #ababab;}
+    .wzmMsg_Text > p {margin:5px 0;white-space:normal;}
+    .wzmMsg_Text a {text-decoration:underline;color:#f00;}
+    .wzmMsg_Text a:hover {color:#900;}
+    .wzmMsg_Link {display:block;position:absolute;top:7px;left:10px;width:50px;height:18px;text-decoration:none !important;outline:none;}
+    .wzmMsg_Link img {border:none;}
+    #wzmMsg_JsClose, .wzmMsg_Close {display:block;position:absolute;top:5px;right:5px;width:26px;height:26px;text-align:center;font-size:22px;line-height:26px;cursor:hand;cursor:pointer;}
+    #wzmMsg_JsClose {z-index:9999;opacity:0;}
+    #wzmMsg_JsClose:checked, #wzmMsg_JsClose:checked + .wzmMsg_Wrapp {display:none;}
+    .wzmMsg_Close > span {display:block;position:relative;width:26px;height:26px;line-height:26px;}
+    #wzmMsg_JsClose:hover + .wzmMsg_Wrapp .wzmMsg_Close, .wzmMsg_Close:hover {background-color:#ead371;}
+    #wzmMsg_JsClose:active + .wzmMsg_Wrapp .wzmMsg_Close, .wzmMsg_Close:active {background-color:#beaf6e;}
 /*-------------------------------  @media print  ------------------------------------*/
     @media print {
         * {
