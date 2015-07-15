@@ -126,33 +126,32 @@
         position: relative;
     }
 /*-------------------------------  breadcrumbs  ------------------------------------*/
-.breadcrumbs {
-    margin-bottom: 15px;
-    font-size: 0;
-}
+    .breadcrumbs {
+        margin-bottom: 15px;
+        font-size: 0;
+    }
 
-.breadcrumbs span {
-    display: inline-block;
-    vertical-align: top;
-    font: 14px/18px Tahoma, Segoe, sans-serif;
-    color: #000;
-}
+    .breadcrumbs span {
+        display: inline-block;
+        vertical-align: top;
+        font: 14px/18px Tahoma, Segoe, sans-serif;
+        color: #000;
+    }
 
-.breadcrumbs span a {
-    color: #5b5b5b;
-    text-decoration: none;
-}
+    .breadcrumbs span a {
+        color: #5b5b5b;
+        text-decoration: none;
+    }
 
-.breadcrumbs span a:hover {
-    color: #cc2229;
-}
+    .breadcrumbs span a:hover {
+        color: #cc2229;
+    }
 
-.breadcrumbs span + span {
-    margin-left: 5px;
-    padding-left: 12px;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAQAAACh8pzAAAAAMElEQVQIHWNgaGT4z3CAgYsBDFA4U4Ay20DC2gwvGb4yOIAYryAMBoZAhjQGY5AkALd8DFsMrlZbAAAAAElFTkSuQmCC) left 7px no-repeat;
-}
-
+    .breadcrumbs span + span {
+        margin-left: 5px;
+        padding-left: 12px;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAQAAACh8pzAAAAAMElEQVQIHWNgaGT4z3CAgYsBDFA4U4Ay20DC2gwvGb4yOIAYryAMBoZAhjQGY5AkALd8DFsMrlZbAAAAAElFTkSuQmCC) left 7px no-repeat;
+    }
 /*-------------------------------  wHeader  ------------------------------------*/
     .wHeader {
         position: relative;
@@ -251,8 +250,6 @@
     .wTxt blockquote { padding: 5px 20px; margin: 5px 0; font-style: italic; border: 10px solid transparent; border-left-color: #ccc; }
     .wTxt p { margin: 1em 0; }
     .wTxt ul, .wTxt ol {margin: 1em 0 1em 1em;}
-    .wTxt li { list-style-type: disc; list-style-position: inside; }
-    .wTxt ol li { list-style-type: decimal; list-style-position: inside; }
     .wTxt table th { font-weight: bold; background: #eee; }
     .wTxt table thead th { vertical-align: bottom; }
     .wTxt table  {

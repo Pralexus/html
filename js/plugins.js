@@ -1239,6 +1239,11 @@
                 return this.optional(element) || /^\d+$/.test(value);
             },
 
+            or: function(value, element, param) {
+                var $module = $(element).parents('.wForm');
+                return $module.find('.' + param +':filled').length;
+            },
+
             // http://jqueryvalidation.org/creditcard-method/
             // based on http://en.wikipedia.org/wiki/Luhn_algorithm
             creditcard: function(value, element) {
