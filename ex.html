@@ -1,0 +1,598 @@
+﻿<!DOCTYPE html>
+<html lang="ru-RU" dir="ltr">
+<!-- (c) студия Wezom | www.wezom.com.ua | v2.0 -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Верстка | (c) студия Wezom | www.wezom.com.ua</title>
+    <meta name="description" lang="ru-ru" content="">
+    <meta name="keywords" lang="ru-ru" content="студия wezom, разработка сайтов">
+    <meta name="keywords" lang="en-us" content="studio wezom, web development">
+    <meta name="author" lang="ru-ru" content="">
+
+    <meta property="og:title" content="Заголовок страницы">
+    <meta property="og:type" content="website"><!-- тип объекта - не изменять -->
+    <meta property="og:url" content="http://site.com/articles/example"><!-- url текущей страницы -->
+    <meta property="og:image" content="http://site.com/pic/image.jpg"><!-- изображение размером не менее 200х200 -->
+    <meta property="og:description" content="Short description text."><!-- краткий текст (новости, товара и т.д) -->
+    <meta property="og:site_name" content="site.com"><!-- домен сайта -->
+    <!--[if IE]><meta http-equiv="imagetoolbar" content="no"><![endif]-->
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->    
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="target-densitydpi=device-dpi">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- saved from url=(0014)about:internet -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicons/manifest.json"> <!-- php - тут и anroid_manifest изменить пути внутри файла на Media/... -->
+    <meta name="msapplication-config" content="browserconfig.xml"> <!-- php - изменить пути внутри файла на Media/... -->
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-title" content="Title"><!-- php - изменить -->
+    <meta name="application-name" content="Title"><!-- php - изменить -->
+    <meta name="msapplication-tooltip" content="Description"><!-- php - изменить -->
+
+    <style>.seoTxt{position:absolute;top:100%;left:0;width:100%;}</style>
+    <link rel="stylesheet" href="css/plugin.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- <link rel="stylesheet" href="css/responsive-portrait.css" media="all and (orientation:portrait)">-->
+    <!-- <link rel="stylesheet" href="css/responsive-landscape.css" media="all and (orientation:landscape)">-->
+    
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->    
+    <script>!function(t){function r(){var t=navigator.userAgent,r=!window.addEventListener||t.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/)&&!t.match(/Chrome/);if(r)return!1;var e="test";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(o){return!1}}t.localSupport=r(),t.localWrite=function(t,r){try{localStorage.setItem(t,r)}catch(e){if(e==QUOTA_EXCEEDED_ERR)return!1}}}(window);
+    </script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/init.js"></script>
+    <!-- for demo -->
+    <style>    
+    .m10_0 {margin: 10px 0; }
+    </style>
+</head>
+
+<body>
+    <div class="wWrapper">
+        <header class="wHeader">
+            <div class="wSize">
+            </div>
+        </header>
+        <!-- .wHeader -->
+        <div class="wConteiner">
+            <div class="wSize">
+                <div class="demo">
+                    <div class="h5T">Адаптивные хлебные крошки</div>
+                    <div class="breadcrumbs">
+                        <span>
+                            <a href="#">Главная</a>
+                        </span>
+                        <span>
+                            <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                        </span>
+                        <span>Текст</span>
+                    </div>
+                </div><!-- .demo -->
+                <hr>
+                <div class="wRight">
+                    <div class="demo">
+                        <div class="h5T">SVG ICONS</div>
+                        <style>
+                        #svgDemoList {margin: 20px 0;border-left: 1px solid #ddd;border-top: 1px solid #ddd;}
+                        #svgDemoList:after { content: ''; display: block; clear: both; height: 0; }
+                        #svgDemoList li {position: relative;float: left;width: 50%;box-sizing: border-box;}
+                        #svgDemoList .svgHolder {width: 100%;height:0px;padding-top: 100%;background-color: #fff; box-sizing: border-box;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;}
+                        #svgDemoList .svgHolder > svg {max-width: 70%;max-height: 70%;}
+                        #svgDemoList code {padding: 3px 0; display: none; position: absolute; top: 100%; left: 0; width: 200%; text-align: center; background: #EB1F27; color: #fff; font-family: Arial;}
+                        #svgDemoList li:nth-child(even) code {left: -100%;}
+                        #svgDemoList li:hover .svgHolder {background-color: #f8f8f8;}
+                        #svgDemoList li:hover code {display: block; }
+                        </style>
+                        <ul id="svgDemoList">
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- .wRight -->
+                <div class="wMiddle">
+                    <div class="demo">
+                        <div class="h5T">Кнопки</div>
+                        <div class="m10_0">
+                            <button class="wBtn">button .wBtn</button>
+                            <span class="wBtn">span .wBtn</span>
+                            <a hre="#" class="wBtn">a .wBtn</a>
+                            <input type="button" class="wBtn" value="input .wBtn">
+                        </div>
+                        <div class="m10_0">
+                            <button class="wBtn">Default</button>
+                            <button class="wBtn primary">Primary</button>
+                            <button class="wBtn succes">Succes</button>
+                            <button class="wBtn info">Info</button>
+                            <button class="wBtn warning">Warning</button>
+                            <button class="wBtn danger">Danger</button>
+                        </div>
+                        <div class="m10_0">
+                            <button class="wBtn lg">Default</button>
+                            <button class="wBtn lg primary">Primary</button>
+                            <button class="wBtn lg succes">Succes</button>
+                            <button class="wBtn lg info">Info</button>
+                            <button class="wBtn lg warning">Warning</button>
+                            <button class="wBtn lg danger">Danger</button>
+                        </div>
+                        <div class="m10_0">
+                            <button class="wBtn lg">
+                                <span class="svgHolder"><svg><use xlink:href="#icon_burger" /></svg></span> #icon_burger
+                            </button>
+                            <button class="wBtn lg primary">
+                                <span class="svgHolder"><svg><use xlink:href="#icon_burger" /></svg></span> #icon_burger
+                            </button>
+                            <button class="wBtn lg succes">
+                                <span class="svgHolder"><svg><use xlink:href="#icon_burger" /></svg></span> #icon_burger
+                            </button><br>
+                            <button class="wBtn lg info">
+                                <span class="svgHolder"><svg><use xlink:href="#icon_burger" /></svg></span> #icon_burger
+                            </button>
+                            <button class="wBtn lg warning">
+                                <span class="svgHolder"><svg><use xlink:href="#icon_burger" /></svg></span> #icon_burger
+                            </button>
+                            <button class="wBtn lg danger">
+                                <span class="svgHolder"><svg><use xlink:href="#icon_burger" /></svg></span> #icon_burger
+                            </button>
+                        </div>
+                    </div><!-- .demo -->
+                    <hr>
+                    <div class="wForm wFormDef" data-form="true">
+                        <div class="wFormRow">
+                            <label class="wLabel" for="file-3">File multiple</label>
+                            <div class="wCaption">Максимальный размер каждого файла 20KB</div>
+                            <div class="wFormInput">
+                                <input type="file" class="wFile" id="file-3" name="file-3" multiple required filesizeEach="20">
+                                <label class="wInput wFileVal" for="file-3" data-txt='["Ничего не выбрано", "Выбрано %num% файлов"]'>Ничего не выбрано</label>
+                            </div>
+                        </div>
+                        <div class="wFormRow">
+                            <button type="submit" class="wSubmit wBtn lg succes"><span>Подтверждение</span></button>
+                            <button type="reset" class="wReset wBtn lg danger"><span>Сброс</span></button>
+                            <button type="button" class="wBtn lg primary"><span>Кнопка</span></button>
+                        </div>
+                    </div>
+                    <div class="demo">
+                        <div class="h5T">Формы</div>
+                        <div class="wForm wFormDef" data-form="true">
+                            <div class="wFormRow">
+                                <label class="wLabel" for="name1">Имя *</label>
+                                <div class="wCaption">Имя не должно содержать цыфры и спец. символы</div>
+                                <div class="wFormInput">
+                                    <input type="text" class="wInput" id="name1" name="name1" required data-rule-word="true" data-rule-minlength="3">
+                                    <div class="inpInfo">Имя *</div>
+                                </div>
+                            </div>
+                            <div class="wFormRow">
+                                <label class="wLabel" for="login1">Login *</label>
+                                <div class="wCaption">Login не может начинаться с цифры и содержать спец. символы</div>
+                                <div class="wFormInput">
+                                    <input type="text" class="wInput" id="login1" name="login1" required data-rule-login="true" data-rule-minlength="3">
+                                    <div class="inpInfo">Login *</div>
+                                </div>
+                            </div>
+                            <div class="wFormRow demoPre">
+                                <label class="wLabel" for="password1">Пароль *</label>
+                                <div class="wFormInput">
+                                    <input type="password" class="wInput" id="password1" name="password1" required data-rule-minlength="5">
+                                    <div class="inpInfo">Пароль *</div>
+                                </div>
+                            </div>
+                            <div class="wFormRow">
+                                <label class="wLabel" for="password2">Повторите Пароль *</label>
+                                <div class="wFormInput">
+                                    <input type="password"class="wInput" id="password2" name="password2" required equalto="#password1">
+                                    <div class="inpInfo">Повторите Пароль *</div>
+                                </div>
+                            </div>
+                            <div class="wFormRow">
+                                <label class="wLabel" for="email1">E-mail *</label>
+                                <div class="wFormInput">
+                                    <input type="email" class="wInput" id="email1" name="email1" required data-rule-email="true" data-msg-required="Укажите e-mail">
+                                    <div class="inpInfo">E-mail *</div>
+                                </div>
+                            </div>
+                            <div class="wFormRow">
+                                <label class="wLabel" for="tel1">Телефон *</label>
+                                <div class="wFormInput">
+                                    <input type="tel" class="wInput phoneMask" id="tel1" name="tel1" required data-rule-phoneUA="true" data-msg-required="Укажите номер телефона">
+                                    <div class="inpInfo">Телефон *</div>
+                                </div>
+                            </div>
+                            <div class="wFormRow">
+                                <div class="wFormInput">
+                                    <textarea class="wTextarea" id="textarea1" name="textarea1" required data-rule-minlength="10" data-msg-required="Введите текст" placeholder="Оставьте свой комментарий"></textarea>
+                                    <div class="inpInfo">Комментарий</div>
+                                </div>
+                            </div>
+                            <div class="wFormRow">
+                                <label class="wLabel" for="select1">Селект *</label>
+                                <div class="wFormInput">
+                                    <select class="wSelect" id="select1" name="select1" required data-msg-required="Введите пункт">
+                                        <option value="v0" selected disabled>Выберете пункт</option>
+                                        <option value="v1">Пункт для выбора - 1</option>
+                                        <option value="v2">Пункт для выбора - 2</option>
+                                        <option value="v3">Пункт для выбора - 3</option>
+                                        <option value="v4">Пункт для выбора - 4</option>
+                                        <option value="v5">Пункт для выбора - 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="wFormRow">
+                                <label class="wLabel" for="select2">Селект *</label>
+                                <div class="wFormInput">
+                                    <select class="wSelect" id="select2" name="select2" multiple required data-msg-required="Введите пункт">
+                                        <option value="v1">Пункт для выбора - 1</option>
+                                        <option value="v2">Пункт для выбора - 2</option>
+                                        <option value="v3">Пункт для выбора - 3</option>
+                                        <option value="v4">Пункт для выбора - 4</option>
+                                    </select>
+                                </div>
+                            </div>                            
+                            <div class="wFormRow">
+                                <label class="wLabel" for="file-1">File</label>
+                                <div class="wCaption">Допустимые расширения файлов: png, gif!</div>
+                                <div class="wFormInput">
+                                    <input type="file" class="wFile" id="file-1" name="file-1" required data-rule-filetype="png|gif" data-msg-required="Выберети файл!">
+                                    <label class="wInput wFileVal" for="file-1" data-txt='["Ничего не выбрано", "Выбрано"]'>Ничего не выбрано</label>
+                                </div>
+                            </div>
+                            <div class="wFormRow">
+                                <label class="wLabel" for="file-2">File multiple</label>
+                                <div class="wCaption">Максимальный общий размер - 20KB</div>
+                                <div class="wFormInput">
+                                    <input type="file" class="wFile" id="file-2" name="file-2" multiple required data-rule-filesize="20" data-msg-required="Выберети файлы!">
+                                    <label class="wInput wFileVal" for="file-2" data-txt='["Ничего не выбрано", "Выбрано %num% файлов"]'>Ничего не выбрано</label>
+                                </div>
+                            </div>
+                            <div class="wFormRow">
+                                <label class="wCheck">
+                                    <input type="checkbox" name="ddfgd" required data-msg="Данное поле необходимо отметить"> 
+                                    <span>Я согласен с условиями использования и обработку моих персональных данных</span>
+                                </label>
+                            </div>
+                            <div class="wFormRow">
+                                <label class="wRadio">
+                                    <input type="radio" name="radio" required data-msg="Данное поле необходимо отметить"> 
+                                    <span>radio 1</span>
+                                </label>
+                                <label class="wRadio">
+                                    <input type="radio" name="radio" data-msg="Данное поле необходимо отметить"> 
+                                    <span>radio 2</span>
+                                </label>
+                                <label class="wRadio">
+                                    <input type="radio" name="radio" data-msg="Данное поле необходимо отметить"> 
+                                    <span>radio 3</span>
+                                </label>
+                            </div>
+                            <div class="wFormRow">
+                                <button type="submit" class="wSubmit wBtn lg succes"><span>Подтверждение</span></button>
+                                <button type="reset" class="wReset wBtn lg danger"><span>Сброс</span></button>
+                                <button type="button" class="wBtn lg primary"><span>Кнопка</span></button>
+                            </div>
+                        </div>
+                    </div><!-- .demo -->
+                    <hr>
+                    <div class="demo">
+                        <div class="h5T">.wForm.wFormSearch</div>
+                        <div class="wForm wFormSearch" data-form="true">
+                            <div class="wFormInput">
+                                <input type="search" class="wInput" id="search1" name="search1" required data-msg-required="Что будем искать?" data-rule-minlength="3" data-msg-minlength="Чтобы начать поиск нужно минимум 3 символа"> 
+                                <button type="submit" class="wSubmit wBtn lg danger"><span class="svgHolder"><svg><use xlink:href="#icon_search" /></svg></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="demo">
+                        <div class="h5T">Magnific Popup</div>
+                        <div class="m10_0">
+                            <button class="wBtn primary mfiA" data-url="hidden/callback.php" data-param='{"id": "login"}'>обратный звонок</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="demo">
+                        <div class="h5T">Пагинация</div>
+                        <div class="tac">
+                            <div class="wPagination">
+                                <a href="#" rel="prev">&lt;</a>
+                                <a href="#" class="curr">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <span>...</span>
+                                <a href="#">9</a>     
+                                <a href="#" rel="next">&gt;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="wMiddle">
+                    <!-- .wMiddle -->
+                    <hr>
+                    <div class="demo">
+                        <div class="h5T">.wTxt - Типографика</div>                        
+                        <div class="wTxt">
+                            <h1>&lt;H1> Заголовок \ &lt;div.h1T></h1>
+                            <h2>&lt;H2> Заголовок \ &lt;div.h2T></h2>
+                            <h3>&lt;H3> Заголовок \ &lt;div.h3T></h3>
+                            <h4>&lt;H4> Заголовок \ &lt;div.h4T></h4>
+                            <h5>&lt;H5> Заголовок \ &lt;div.h5T></h5>
+                            <h6>&lt;H6> Заголовок \ &lt;div.h6T></h6>
+
+                            <p>Краткая демонстрация текстовых элементов. Элемент &lt;p> создает новый параграф, который имеет отсуп до и после себя.  Чтобы превратить ваш текст в гиперссылку, нужно использовать <a href="#">элемент &lt;a></a>. Вы можете выделить текст используя такие элементы как <i>&lt;i></i> или <em>&lt;em> элемент</em>, или обозначить важный текст при помощи <b>&lt;b> элемента</b> или <strong>&lt;strong> элемента</strong>, подчекрнуть <u>&lt;u></u> и <ins>&lt;ins> элементами</ins> или зачеркнуть <del>&lt;del> элементом</del>, сделать пометку <mark>&lt;mark> элементом</mark>.</p>
+
+                            <p>Также можно использовать специальные элементы <sup>&lt;sup></sup> и <sub>&lt;sub></sub></p>
+
+                            <p>Тег <code>&lt;code></code> предназначен для отображения одной или нескольких строк текста, который представляет собой программный код.</p>
+                            <p>Тег <kbd>&lt;kbd></kbd> используется для обозначения текста, который набирается на клавиатуре или для названия клавиш.</p>
+                            <p>Тег <samp>&lt;samp></samp> используется для отображения текста, который является результатом вывода компьютерной программы или скрипта.</p>
+                            <p>Тег <code>&lt;small></code> <small>уменьшает размер шрифта по сравнению с обычным текстом.</small></p>
+                            <p>Тег <code>&lt;big></code> <big>увеличивает размер шрифта по сравнению с обычным текстом.</big></p>
+                            <p>Тег <code>&lt;abbr></code> указывает, что <abbr title="последовательность символов">ПС</abbr> является аббревиатурой. С помощью атрибута title дается расшифровка сокращения, что позволяет понимать аббревиатуру тем людям, которые с ней не знакомы. Кроме того, поисковые системы индексируют полнотекстовый вариант сокращения, что может использоваться для повышения рейтинга документа.</p>
+                            <p>Как правило, в документе, когда упоминается новый термин, он выделяется курсивом и дается его определение. При использовании этого термина в дальнейшем, он считается уже известным читателю. Тег <dfn>&lt;dfn></dfn> применяется для выделения таких терминов при их первом появлении в тексте.</p>
+                            <address>Тег <code>&lt;address></code> предназначен для хранения информации об авторе и может включать в себя любые элементы HTML вроде ссылок, текста, выделений и т.д.</address>
+                            <blockquote>Элемент <code>&lt;blockquote></code> используется для обозначения цитат, длинных выписок, афоризмов и прочее, который создается в новом блоке с пробелами до и после.</blockquote>
+
+                            <pre>&lt;pre> элемент для блоков кода <br />.breadcrumbs span + span:before {<br />&nbsp;&nbsp;&nbsp;content: '/';<br />&nbsp;&nbsp;&nbsp;position: absolute;<br />&nbsp;&nbsp;&nbsp;top: 0;<br />&nbsp;&nbsp;&nbsp;left: 0;<br />&nbsp;&nbsp;&nbsp;width: 20px;<br />&nbsp;&nbsp;&nbsp;height: 100%;<br />&nbsp;&nbsp;&nbsp;text-align: center;<br />}
+                            </pre>
+
+                            <h3>Маркированный список</h3>
+                            <ul>
+                                <li><a href="http://www.wezom.com.ua" target="_blank" title="Веб-студия Wezom">Веб-студия Wezom</a> - Продвижение, создание сайтов, разработка, раскрутка сайта</li>
+                                <li><a href="http://www.korova.ks.ua" target="_blank" title="Коворкинг - Центр Корова">Коворкинг - Центр Корова</a> - Аренда офиса, рабочего места в центре Херсона</li>
+                                <li><a href="http://www.100bannerov.com" target="_blank" title="100bannerov">100bannerov</a> - Размещение бесплатной баннерной рекламы в интернете</li>
+                                <li><a href="http://www.wezom.mobi" target="_blank" title="Wezom.mobile">Wezom.mobile</a> - Разработка и создание мобильных приложений для android и ios устройств в Украине</li>
+                            </ul>
+                            <pre>&lt;ul><br />&nbsp;&nbsp;&nbsp;&lt;li>Продвижение, создание сайтов, разработка, раскрутка сайта&lt;/li><br />&nbsp;&nbsp;&nbsp;&lt;li>Аренда офиса, рабочего места в центре Херсона&lt;/li><br />&nbsp;&nbsp;&nbsp;&lt;li>Размещение бесплатной баннерной рекламы в интернете&lt;/li><br />&nbsp;&nbsp;&nbsp;&lt;li>Разработка и создание мобильных приложений для android и ios устройств в Украине&lt;/li><br />&lt;/ul></pre>
+
+                            <h3>Нумерованный список</h3>
+                            <ol>
+                                <li><a href="http://www.dom-rebenka.org.ua" target="_blank" title="Областной Дом ребенка">Областной Дом ребенка</a> - Помощь детям с пораженной ЦНС</li>
+                                <li><a href="http://www.blogoduma.ru" target="_blank" title="Медицинский портал">Медицинский портал</a> - Все о здоровье и медицин</li>
+                                <li><a href="http://www.more.ks.ua" target="_blank" title="Отдых на море">Отдых на море</a> - Черное и Азовское море / пансионаты Херсонского побережья</li>
+                                <li><a href="http://www.rafting.mk.ua" target="_blank" title="Рафтинг на Южном Буге и в Карпатах">Рафтинг на Южном Буге и в Карпатах</a> - Рафтинг в Украине, сплав по реке Южный Буг</li>
+                            </ol>
+                            <pre>&lt;ol><br />&nbsp;&nbsp;&nbsp;&lt;li>Помощь детям с пораженной ЦНС&lt;/li><br />&nbsp;&nbsp;&nbsp;&lt;li>Все о здоровье и медицин&lt;/li><br />&nbsp;&nbsp;&nbsp;&lt;li>Черное и Азовское море / пансионаты Херсонского побережья&lt;/li><br />&nbsp;&nbsp;&nbsp;&lt;li>Рафтинг в Украине, сплав по реке Южный Буг&lt;/li><br />&lt;/ol></pre>
+
+                            <h3>Список определений</h3>
+                            <dl>
+                                <dt>Что такое Тег?</dt>
+                                <dd>Тег — это специальный символ разметки, который применяется для вставки различных элементов на веб-страницу таких как: рисунки, таблицы, ссылки и др., и для изменения их вида.</dd>
+                                <dt>Что такое HTML-документ?</dt>
+                                <dd>Обычный текстовый файл, который может содержать в себе текст, теги и стили. Изображения и другие объекты хранятся отдельно. Содержимое такого файла обычно называется HTML-код.</dd>
+                                <dt>Что такое Сайт?</dt>
+                                <dd>Cайт — это набор отдельных веб-страниц, которые связаны между собой ссылками и единым оформлением.</dd>
+                            </dl>
+                            <pre>&lt;dl><br />&nbsp;&nbsp;&nbsp;&lt;dt>Термин 1&lt;/dt><br />&nbsp;&nbsp;&nbsp;&lt;dd>Определение 1&lt;/dd><br />&nbsp;&nbsp;&nbsp;&lt;dt>Термин 2&lt;/dt><br />&nbsp;&nbsp;&nbsp;&lt;dd>Определение 2&lt;/dd><br />&lt;/dl></pre>
+
+                            <h2>Выравнивание текста</h2>
+                            <h4>По левому краю</h4>
+                            <p style="text-align: left;"><img src="pic/no-image.png" alt="" width="300" style="float: right; margin: 5px 0 20px 20px;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis modi deleniti accusamus nihil doloremque enim, fugit ipsa optio amet voluptas? Vitae iusto officiis ex deserunt fugit, nemo temporibus, quam dolores, voluptatibus exercitationem quo! Repellendus accusamus unde totam, ad aliquam reprehenderit non provident iure impedit quia et atque, cupiditate maxime expedita!</p>
+                            <p style="text-align: left;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora inventore itaque assumenda. Sed, fugiat quas labore quibusdam alias obcaecati natus aliquid rerum praesentium ratione! Eaque deleniti nobis consequatur, nihil dolorem omnis autem dolores? Maiores quidem eligendi eveniet omnis ut, tenetur ipsam deleniti esse labore magnam vitae ipsum, quo, expedita autem a atque voluptate. At quam esse aspernatur saepe hic, amet pariatur, aperiam quibusdam tempore libero nulla voluptatibus sed sit quas odio inventore. Natus quae velit reiciendis aliquid eaque perspiciatis iure sint magni, cum illo, tempore odio obcaecati error voluptates esse, dicta sit at doloribus beatae sapiente dolore eligendi voluptate culpa autem! Vitae rem nostrum itaque, illum, cumque nulla minus delectus consequuntur labore quasi dolorum aspernatur? Sint facilis, illo quidem similique quaerat assumenda dolor voluptatem provident, debitis iste officiis rerum consequatur!</p>
+
+                            <h4>По правому краю</h4>
+                            <p style="text-align: right;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis modi deleniti accusamus nihil doloremque enim, fugit ipsa optio amet voluptas? Vitae iusto officiis ex deserunt fugit, nemo temporibus, quam dolores, voluptatibus exercitationem quo! Repellendus accusamus unde totam, ad aliquam reprehenderit non provident iure impedit quia et atque, cupiditate maxime expedita!</p>
+                            <p style="text-align: right;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, cupiditate nostrum libero praesentium illum corporis culpa, quos quaerat fugit fuga suscipit porro, necessitatibus recusandae dolorum amet rem maiores est eaque minus veniam accusamus, aspernatur aliquid ad. Ipsum quos, magni eaque veniam ad quae ducimus optio debitis consequuntur rerum pariatur harum, quibusdam facilis provident. Fugiat neque accusamus quam aliquid veritatis eligendi vel sequi ad ducimus iusto doloribus in, velit odit consectetur accusantium ratione eaque saepe quas soluta. Incidunt officiis, eum aspernatur explicabo magnam asperiores voluptas dolores, sit adipisci non dignissimos veniam ullam sequi accusantium, aperiam quaerat modi beatae vitae tenetur voluptates corrupti alias quae. Atque facere vitae, temporibus nesciunt repudiandae architecto, debitis similique, hic natus et eos aliquam nemo nisi quo? Fugiat optio eligendi, natus nulla illum. Debitis consequatur, at fugiat!</p>
+
+                            <h4>По центру</h4>
+                            <p style="text-align: center;"><img src="pic/no-image.png" alt="" width="300"></p>
+                            <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis modi deleniti accusamus nihil doloremque enim, fugit ipsa optio amet voluptas? Vitae iusto officiis ex deserunt fugit, nemo temporibus, quam dolores, voluptatibus exercitationem quo! Repellendus accusamus unde totam, ad aliquam reprehenderit non provident iure impedit quia et atque, cupiditate maxime expedita!</p>
+                            <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis sed inventore reprehenderit alias rem repellat ab vitae, excepturi perferendis libero magnam hic earum, unde a nesciunt veritatis temporibus vel accusantium aliquid. Expedita et incidunt nostrum quod maiores consectetur, ex itaque inventore hic distinctio exercitationem officia assumenda natus dolorem illum soluta, quam perspiciatis voluptatem voluptatum veniam fugit reiciendis ipsam. Soluta tempore pariatur nulla excepturi! Facilis repudiandae, vel ullam blanditiis atque placeat eum reprehenderit dolores maiores vitae voluptate ipsam recusandae nihil? Itaque impedit minima, harum assumenda? Placeat ipsum aut consequuntur, sint reprehenderit quasi laboriosam libero nostrum reiciendis? Quo illo, fugiat eum consectetur earum minus reprehenderit dolor eaque reiciendis molestias nihil ratione voluptas velit vel et. Delectus exercitationem, amet quibusdam iusto cumque harum alias, et beatae, cupiditate perspiciatis minus, autem illum earum magni!</p>
+
+                            <h4>По ширине</h4>
+                            <p style="text-align: justify;"><img src="pic/no-image.png" alt="" width="300" style="float: left;margin: 5px 20px 20px 0;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis modi deleniti accusamus nihil doloremque enim, fugit ipsa optio amet voluptas? Vitae iusto officiis ex deserunt fugit, nemo temporibus, quam dolores, voluptatibus exercitationem quo! Repellendus accusamus unde totam, ad aliquam reprehenderit non provident iure impedit quia et atque, cupiditate maxime expedita!</p>
+                            <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem autem totam qui, quisquam id? Reprehenderit minima placeat magnam similique debitis nihil perferendis quidem sed alias impedit repellat et eum aspernatur nulla, nemo quis odit, nesciunt unde reiciendis quia fugit rem! Laborum officiis, blanditiis quia architecto quaerat nobis consequatur. Molestiae est pariatur repellendus, reprehenderit adipisci id accusamus! Corrupti eum provident labore, voluptatum ratione voluptatem laborum perferendis non excepturi, quidem eos veniam, laboriosam iusto rerum quae suscipit atque pariatur blanditiis placeat sunt nihil, ullam cum soluta iure? Ipsa quam optio maiores amet ipsum accusantium suscipit ut at illum. Aperiam neque cumque voluptate ducimus, provident odit id recusandae eius possimus porro eos, harum sequi illum quis libero quae deserunt ab assumenda facere pariatur dolore odio, accusantium qui. Labore fuga odio at commodi exercitationem.</p>
+
+                            <h3>Таблицы</h3>
+                            <table>
+                                <tr>
+                                    <th>Заглавие таблици</th>
+                                    <th>Заглавие таблици</th>
+                                    <th>Заглавие таблици</th>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                            </table>
+
+                            <h5>Таблица CSS класс <b>"table-null"</b></h5>
+                            <table class="table-null">
+                                <tr>
+                                    <th>Заглавие таблици</th>
+                                    <th>Заглавие таблици</th>
+                                    <th>Заглавие таблици</th>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                            </table>
+
+                            <h5>Таблица CSS класс <b>"table-zebra"</b></h5>
+                            <table class="table-zebra">
+                                <tr>
+                                    <th>Заглавие таблици</th>
+                                    <th>Заглавие таблици</th>
+                                    <th>Заглавие таблици</th>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                                <tr>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                    <td>Данные вашей таблици</td>
+                                </tr>
+                            </table>
+                            <p><iframe width="560" height="315" src="https://www.youtube.com/embed/LEzKfmzKmjA" frameborder="0" allowfullscreen></iframe></p>
+                            <p><iframe src="https://player.vimeo.com/video/136354421?badge=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="demo">
+                        <div class="h5T">Дефолтные Изображения</div>
+                        <div class="wTxt tac demoimg">
+                            <style>.demoimg img{border:1px solid #ccc;} </style>
+                            <p><a href="pic/image.jpg" target="_blank">og:image.jpg</a></p>
+                            <p><img src="pic/image.jpg" alt=""></p>
+                            <p><a href="pic/watermark.png" target="_blank">watermark.png</a></p>
+                            <p><img src="pic/watermark.png" alt=""></p>
+                            <p><a href="pic/no-avatar.png" target="_blank">no-avatar.png</a></p>
+                            <p><img src="pic/no-avatar.png" alt=""></p>
+                            <p><a href="pic/no-image.png" target="_blank">no-image.png</a></p>
+                            <p><img src="pic/no-image.png" alt=""></p>
+                            <h2>Favicons - <i>favicons/</i></h2>
+                            <p style="background-color:#eee; padding: 20px;">
+                                <img src="favicons/apple-touch-icon-57x57.png" title="apple-touch-icon-57x57.png">
+                                <img src="favicons/apple-touch-icon-60x60.png" title="apple-touch-icon-60x60.png">
+                                <img src="favicons/apple-touch-icon-72x72.png" title="apple-touch-icon-72x72.png">
+                                <img src="favicons/apple-touch-icon-76x76.png" title="apple-touch-icon-76x76.png">
+                                <img src="favicons/apple-touch-icon-114x114.png" title="apple-touch-icon-114x114.png">
+                                <img src="favicons/apple-touch-icon-120x120.png" title="apple-touch-icon-120x120.png">
+                                <img src="favicons/apple-touch-icon-144x144.png" title="apple-touch-icon-144x144.png">
+                                <img src="favicons/apple-touch-icon-152x152.png" title="apple-touch-icon-152x152.png">
+                                <img src="favicons/apple-touch-icon-180x180.png" title="apple-touch-icon-180x180.png">
+                                <img src="favicons/apple-touch-icon.png" title="apple-touch-icon-57x57.png">
+                                <img src="favicons/android-chrome-192x192.png" title="android-chrome-192x192.png">
+                                <br>
+                                <img src="favicons/favicon-16x16.png" title="favicon-16x16.png">
+                                <img src="favicons/favicon-32x32.png" title="favicon-32x32.png">
+                                <img src="favicons/favicon-96x96.png" title="favicon-96x96.png">
+                                <img src="favicons/favicon-194x194.png" title="favicon-194x194.png">
+                                <br>
+                                <img style="background-color: #555;" src="favicons/mstile-70x70.png" title="mstile-70x70.png">
+                                <img style="background-color: #555;" src="favicons/mstile-150x150.png" title="mstile-150x150.png">
+                                <img style="background-color: #555;" src="favicons/mstile-310x150.png" title="mstile-310x150.png">
+                                <img style="background-color: #555;" src="favicons/mstile-310x310.png" title="mstile-310x310.png">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- .wMiddle -->
+            </div>
+            <!-- .wSize -->
+        </div>
+        <!-- .wConteiner -->
+    </div>
+    <!-- .wWrapper -->
+    <footer class="wFooter">
+        <div class="wSize">
+        </div>
+    </footer>
+    <!-- .wFooter -->
+
+    <!-- WEZOM DEFS -->
+    <noscript>
+        <input id="wzmMsg_JsClose" type="checkbox" title="Закрыть">
+        <div id="wzmMsg_JsInform" class="wzmMsg_Wrapp">
+            <div class="wzmMsg_Text">
+                <p>В Вашем браузере <b>отключен JavaScript!</b> Для корректной работы с сайтом необходима поддержка Javascript.</p>
+                <p>Мы рекомендуем Вам включить использование JavaScript в настройках вашего браузера.</p>
+            </div>
+            <a class="wzmMsg_Link" href="http://wezom.com.ua/" target="_blank" title="Студия Wezom">
+                <img src="pic/wezom-info-red.gif" width="50" height="18" alt="Студия Wezom">
+            </a>
+            <div class="wzmMsg_Close"><span>&times;</span></div>
+        </div>
+    </noscript>
+    <script>
+    function $wzmOldInit(){var scrpt=document.createElement("script");scrpt.src="http://www.inkubator.ks.ua/html/old/js/wOld.js";document.body.appendChild(scrpt);};try{document.addEventListener("DOMContentLoaded",$wzmOldInit,false)}catch(e){window.attachEvent("onload",$wzmOldInit)}
+    </script>
+    <!-- end WEZOM DEFS -->
+    <!-- SVG-SPRITE -->
+    <svg id="sprite" xmlns="http://www.w3.org/2000/svg" style="height:0;width:0;visibility:hidden;position:absolute;top:0;left:0;" onload="spriteSvg.initialize(this,'js/sprite-svg.json')"></svg>
+    <script>var spriteSvg={ns:"http://www.w3.org/2000/svg",initialize:function(e,t){if(this.prefix="spriteSvg_"+e.id,window.localSupport){var i=window.localStorage[this.prefix];if(i){var n=JSON.parse(i);this.setSprite(e,n)}else this.getJson(e,t)}else this.getJson(e,t)},getJson:function(e,t){var i=new XMLHttpRequest,n=this;i.open("GET",t,!0),i.setRequestHeader("Content-type","application/json"),i.onreadystatechange=function(){if(4==i.readyState&&200==i.status){var t=JSON.parse(i.responseText);n.setSprite(e,t),window.localSupport&&window.localWrite(n.prefix,JSON.stringify(t))}},i.send()},buildElem:function(e,t){var i,n,s;for(i in t)for(n in t[i]){var o=document.createElementNS(this.ns,n);for(s in t[i][n])"stops"===s?(this.buildElem(o,t[i][n][s])):o.setAttributeNS(null,s,t[i][n][s]);e.appendChild(o)}},isDone:function(){},setSprite:function(e,t){for(key in t){var i=t[key],n=document.createElementNS(this.ns,"symbol");n.setAttributeNS(null,"id",key),n.setAttributeNS(null,"viewBox",i.viewBox),this.buildElem(n,i.symbol),i.hasOwnProperty("gradients")&&this.buildElem(e,i.gradients),e.appendChild(n)}this.isDone(e)}};
+    </script>
+    <!-- end SVG-SPRITE -->
+    <!-- demo sprite no php -->
+    <script>
+    spriteSvg.isDone=function(e){for(var i=document.getElementById("svgDemoList"),n="",d=0;d<e.children.length;d++){var l=e.children[d];n+='<li style="z-index:'+(e.children.length-d)+'"><div class="svgHolder"><svg><use xlink:href="#'+l.id+'" /></svg></div><code>#'+l.id+"</code></li>"}i.innerHTML=n};
+    </script>
+    <!-- end demo sprite no php -->
+</body>
+
+</html>

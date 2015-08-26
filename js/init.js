@@ -1,56 +1,134 @@
 $(document).ready(function() {
 
     // detect transit support
-    /*var transitFlag = true;
-    if (!Modernizr.cssanimations) {
-        transitFlag = false;
-    }*/
+    var transitFlag = Modernizr.cssanimations;
 
-    $('.wForm').each(function() {
-        var formValid = $(this);
-        formValid.validate({
-            showErrors: function(errorMap, errorList) {
-                if (errorList.length) {
-                    var s = errorList.shift();
-                    var n = [];
-                    n.push(s);
-                    this.errorList = n;
+    localStorage.clear(); //не забыть удалить
+
+    function validation() {
+        $('.wForm').each(function() {
+            var formValid = $(this);
+            formValid.validate({
+                showErrors: function(errorMap, errorList) {
+                    if (errorList.length) {
+                        var s = errorList.shift();
+                        var n = [];
+                        n.push(s);
+                        this.errorList = n;
+                    }
+                    this.defaultShowErrors();
+                },
+                invalidHandler: function(form, validator) {
+                    $(validator.errorList[0].element).trigger('focus');
+                    formValid.addClass('no_valid');
+                },
+                submitHandler: function(form) {
+                    formValid.removeClass('no_valid');
+                    if (form.tagName === 'FORM') {
+                        form.submit();
+                    } else {
+                        $.ajax({
+                            type: 'POST',
+                            url: $(form).attr('data-form-url'), /* path/to/file.php */                        
+                            data: $(form).find('select, textarea, input').serializeArray(),
+                            dataType: 'json',
+                            success: function(data) {
+                                
+                            },
+                            error: function() {
+                                $.magnificPopup.open({
+                                    items: {
+                                        src: '<div class="mfiModal" style="max-width: 300px;"><p>Форма отправлена</p><p>Для верстальщика все ок :)</p></div>',
+                                        type: 'inline'
+                                    },
+                                    removalDelay: 450,
+                                    mainClass: 'zoom-in'
+                                });
+                            }
+                        });
+                    }
                 }
-                this.defaultShowErrors();
-            },
-            invalidHandler: function(form, validator) {
-                $(validator.errorList[0].element).trigger('focus');
-                formValid.addClass('no_valid');
-            },
-            submitHandler: function(form) {
-                formValid.removeClass('no_valid');
-                if (form.tagName === 'FORM') {
-                    form.submit();
+            });
+        });
+
+        $('.wForm').on('change', '.wFile', function(event) {
+            var m = $(this).prop('multiple'), f = this.files,
+                label = $(this).siblings('.wFileVal'), t = label.data('txt');
+            if (f.length) {
+                if (m) {
+                    var v = t[1].replace('%num%', f.length), a = [];
+                    for (var i = 0; i < f.length; i++) {
+                        a.push(f[i].name);
+                    }
+                    label.html('<span>' + v + ' <ins>('+a.join(', ') + ')</ins></span>'); $(this).blur();
                 } else {
-                    $.ajax({
-                        type: 'POST',
-                        url: $(form).attr('data-form-url'), /* path/to/file.php */                        
-                        data: $(form).find('select, textarea, input').serializeArray(),
-                        dataType: 'json',
-                        success: function(data) {
-                            
-                        },
-                        error: function() {
-                            console.error('Для верстальщика все ок :)');
-                        }
-                    });
+                    label.html(t[1]+': '+f[0].name); $(this).blur();
                 }
+            } else {
+                label.html(t[0]);
+            }
+        })
+
+        /* Без тега FORM */
+        $('.wForm').on('click', '.wSubmit', function(event) {
+            var form = $(this).closest('.wForm');
+            form.valid();
+            if (form.valid()) {
+                form.submit();
             }
         });
+
+        /* Сброс Без тега FORM */
+        $('.wForm').on('click', '.wReset', function(event) {
+            var form = $(this).closest('.wForm');
+            if (form.is('DIV')) {
+                form.validReset();
+            }
+        });
+    }
+
+    validation();
+
+    /* magnificPopup */
+
+    $('body').magnificPopup({
+        delegate: '.mfiA',
+        callbacks: {
+            elementParse: function(item) {
+                mfiID = item.el.data('param').id;
+                this.st.ajax.settings = {
+                    url: item.el.data('url'),
+                    type: 'POST',
+                    data: item.el.data('param')
+                };
+            },
+            ajaxContentAdded: function(el) {
+                validation();
+            }
+        },
+        type: 'ajax',
+        removalDelay: 300,
+        mainClass: 'zoom-in'
     });
 
-    /* Без тега FORM */
-    $('.wSubmit').on('click', function(event) {
-        var form = $(this).closest('.wForm');
-        form.valid();
-        if (form.valid()) {
-            form.submit();
+    /*wTxt iframe*/
+    function wTxtIFRAME() {
+        var list = $('.wTxt').find('iframe');
+        if (list.length) {
+            for (var i = 0; i < list.length; i++) {
+                var ifr = list[i];
+                var filter = /youtu.be|youtube|vimeo/g; // d
+                //if (typeof $(ifr).data('wraped') === 'undefined') { // без фильтра
+                if (typeof $(ifr).data('wraped') === 'undefined' && !!ifr.src.match(filter)) {
+                    var ratio = (+ifr.height / +ifr.width * 100).toFixed(0);
+                    $(ifr).data('wraped', true).wrap('<div class="iframeHolder ratio_'+ratio.slice()+'"></div>');
+                }
+            }
         }
+    }
+
+    $(window).load(function() {
+        wTxtIFRAME();
     });
 
 });

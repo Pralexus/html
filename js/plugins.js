@@ -1,3 +1,157 @@
+/*-------------------------------  LANG_CONSTANTS  ------------------------------------*/
+    function siteLang(){var t=[true,'ru','ua','pl','en'],i,w=window.navigator,l=document.documentElement.getAttribute("lang")||w.language||w.browserLanguage||w.userLanguage||"en";l=l.toLowerCase().substr(0,2);for(i=1;i<t.length;i++){if(t[i]===l)t[0]=false;};if(t[0]){l='en'};return l;}
+    $.LANG_SITE=siteLang();
+    var LANG_PLUGIN = Object.create(null);
+    
+    LANG_PLUGIN.Magnific = {
+        ru: {
+            tClose: 'Закрыть (ESC)',
+            tLoading: 'Загрузка контента ...',
+            tNotFound: 'Контент не найден',
+            tError: 'Невозможно загрузить <a href="%url%" target="_blank">Контент</a>.',
+            tErrorImage: 'Невозможно загрузить <a href="%url%" target="_blank">Изображение #%curr%</a>.',
+            tPrev: 'Предыдущая (клавиша Left)',
+            tNext: 'Следующая (клавиша Right)',
+            tCounter: '%curr% из %total%'
+        },
+        ua: {
+            tClose: 'Закрити (ESC)',
+            tLoading: 'Завантаження контенту ...',
+            tNotFound: 'Контент не знайдено',
+            tError: 'Неможливо завантажити <a href="%url%" target="_blank">контент</a>.',
+            tErrorImage: 'Неможливо завантажити <a href="%url%" target="_blank">Зображенння #%curr%</a>.',
+            tPrev: 'Попередня (клавіша Left)',
+            tNext: 'Наступна (клавіша Right)',
+            tCounter: '%curr% з %total%'
+        },
+        pl: {
+            tClose: 'Zamknąć (ESC)',
+            tLoading: 'Zawartość do treści ...',
+            tNotFound: 'Nie znaleziono treści',
+            tError: 'Niemożliwe do ściągnięcia <a href="%url%" target="_blank">treści</a>.',
+            tErrorImage: 'Niemożliwe do ściągnięcia <a href="%url%" target="_blank">Obrazów #%curr%</a>.',
+            tPrev: 'Poprzednia (klucz Left)',
+            tNext: 'Następna (klucz Right)',
+            tCounter: '%curr% z %total%'
+        },
+        en: {
+            tClose: 'Close (ESC)',
+            tLoading: 'Loading ...',
+            tNotFound: 'Content not found',
+            tError: '<a href="%url%" target="_blank">The content</a> could not be loaded.',
+            tErrorImage: '<a href="%url%" target="_blank">The image #%curr%</a> could not be loaded.',
+            tPrev: 'Previous (Left arrow key)',
+            tNext: 'Next (Right arrow key)',
+            tCounter: '%curr% of %total%'
+        }
+    };
+
+    LANG_PLUGIN.validate = {
+        ru: {
+            required: "Это поле необходимо заполнить!",
+            password: "Укажите пароль!",
+            remote: "Пожалуйста, введите правильное значение!",
+            email: "Пожалуйста, введите корректный адрес электронной почты!",
+            url: "Пожалуйста, введите корректный URL!",
+            date: "Пожалуйста, введите корректную дату!",
+            dateISO: "Пожалуйста, введите корректную дату в формате ISO!",
+            number: "Пожалуйста, введите число!",
+            digits: "Пожалуйста, вводите только цифры!",
+            creditcard: "Пожалуйста, введите правильный номер кредитной карты!",
+            equalTo: "Пожалуйста, введите такое же значение ещё раз!",
+            maxlength: "Пожалуйста, введите не больше {0} символов!",
+            minlength: "Пожалуйста, введите не меньше {0} символов!",
+            rangelength: "Пожалуйста, введите значение длиной от {0} до {1} символов!",
+            range: "Пожалуйста, введите число от {0} до {1}!",
+            filetype: "Допустимые расширения файлов: {0}!",
+            filesize: "Максимальный размер {0} KB!",
+            filesizeEach: "Максимальный размер каждого файла {0} KB!",
+            max: "Пожалуйста, введите число, меньшее или равное {0}!",
+            min: "Пожалуйста, введите число, большее или равное {0}!",
+            // add
+            word: "Введите корректное словестное значение!",
+            login: "Введите корректный логин!",
+            phoneUA: "Укажите корректный номер +38ХХХХХХХХХХ"
+        },
+        ua: {
+            required: "Це поле необхідно заповнити!",
+            password: "Вкажіть пароль!",
+            remote: "Будь ласка, введіть правильне значення!",
+            email: "Будь ласка, введіть коректну адресу електронної пошти!",
+            url: "Будь ласка, введіть коректний URL!",
+            date: "Будь ласка, введіть коректну дату!",
+            dateISO: "Будь ласка, введіть коректну дату у форматі ISO!",
+            number: "Будь ласка, введіть число!",
+            digits: "Будь ласка, вводите тільки цифри!",
+            creditcard: "Будь ласка, введіть правильний номер кредитної картки!",
+            equalTo: "Будь ласка, введіть таке ж значення ще раз!",
+            maxlength: "Будь ласка, введіть не більш {0} символів!",
+            minlength: "Будь ласка, введіть не менш {0} символів!",
+            rangelength: "Будь ласка , введіть значення довжиною від {0} до {1} символів!",
+            range: "Будь ласка, введіть число від {0} до {1}!",
+            filetype: "Допустимые расширения файлов: {0}!",
+            filesize: "Максимальный размер {0} KB!",
+            filesizeEach: "Максимальный размер каждого файла {0} KB!",
+            max: "Будь ласка, введіть число, менше або рівне {0}!",
+            min: "Будь ласка, введіть число, більше або рівне {0}!.",
+            // add
+            word: "Введіть коректне ім'я!",
+            login: "Введіть коректний логін!",
+            phoneUA: "Введіть корректний номер +38ХХХХХХХХХХ"
+        },
+        pl: {
+            required: "To pole należy wypełnić!",
+            password: "Określ paroll!",
+            remote: "Proszę, wprowadźcie prawidłowe znaczenie!",
+            email: "Proszę wpisać poprawny adres e-mail!",
+            url: "Proszę podać poprawny adres URL!",
+            date: "Wpisz poprawną datę!",
+            dateISO: "Proszę podać poprawną datę w formacie ISO!",
+            number: "Proszę wpisać numery!",
+            digits: "Proszę wpisać tylko liczby!",
+            creditcard: "Proszę podać poprawny numer karty kredytowej!",
+            equalTo: "Proszę ponownie wprowadzić wartość!",
+            maxlength: "Proszę wpisać nie więcej niż {0} znaków!",
+            minlength: "Proszę podać co najmniej {0} znaków!",
+            rangelength: "Prosimy podać wartość pomiędzy {0} {1} znaków!",
+            range: "Wprowadź liczbę między {0} - {1}!",
+            filetype: "Dopuszczalne rozszerzenia plików: {0}!",
+            filesize: "Maksymalny rozmiar {0} KB!",
+            filesizeEach: "Maksymalny rozmiar każdego plika {0} KB!",
+            max: "Podaj numer mniejsza lub równa {0}!",
+            min: "Wprowadź liczbę większą lub równą {0}!",
+            // add
+            word: "Wprowadź poprawne znaczenie słów!",
+            login: "Proszę podać poprawną nazwę użytkownika!",
+            phoneUA: "Proszę podać poprawny numer +38ХХХХХХХХХХ"
+        },
+        en: {
+            required: "This field is required!",
+            password: "Specify paroll!",
+            remote: "Please fix this field!",
+            email: "Please enter a valid email address!",
+            url: "Please enter a valid URL!",
+            date: "Please enter a valid date!",
+            dateISO: "Please enter a valid date ISO!",
+            number: "Please enter a valid number!",
+            digits: "Please enter only digits!",
+            creditcard: "Please enter a valid credit card number!",
+            equalTo: "Please enter the same value again!",
+            maxlength: "Please enter no more than {0} characters!",
+            minlength: "Please enter at least {0} characters!",
+            rangelength: "Please enter a value between {0} and {1} characters long!",
+            range: "Please enter a value between {0} and {1}!",
+            filetype: "Допустимые расширения файлов: {0}!",
+            filesize: "Максимальный размер {0} KB!",
+            filesizeEach: "Максимальный размер каждого файла {0} KB!",
+            max: "Please enter a value less than or equal to {0}!",
+            min: "Please enter a value greater than or equal to {0}!",
+            // add
+            word: "Please enter the correct word meanings!",
+            login: "Please enter a valid username!",
+            phoneUA: "Please enter a valid number +38ХХХХХХХХХХ"
+        }
+    };
 /*-------------------------------  validate  ------------------------------------*/
 
     $.extend($.fn, {
@@ -18,7 +172,7 @@
             // if nothing is selected, return nothing; can't chain anyway
             if (!this.length) {
                 if (options && options.debug && window.console) {
-                    console.warn("Nothing selected, can't validate, returning nothing.");
+                    console.warn("Nothing selected, can't validate, returning nothing!");
                 }
                 return;
             }
@@ -196,6 +350,43 @@
             }
 
             return data;
+        },
+        validReset: function() {
+            var ths = $(this[0]);
+            var sett = ths.validate().settings;
+            reset_InTx(ths.find('input'));
+            reset_InTx(ths.find('textarea'));
+            reset_Sel(ths.find('select'));
+
+            function reset_InTx(els) {
+                for (var i = 0; i < els.length; i++) {
+                    var t = els[i];
+                    var jt = $(t);
+                    switch(t.type) {
+                        case 'radio': case'checkbox':
+                            t.checked = t.defaultChecked;
+                            break;
+                        case 'file':
+                            var fV = $(t).siblings('.wFileVal');
+                            t.outerHTML = t.outerHTML;
+                            fV.html(fV.data('txt')[0]);
+                            jt = ths.find('#'+t.id);
+                            break;
+                        default:
+                            t.value = t.defaultValue;
+                    }
+                    jt.removeClass(sett.errorClass).trigger('change').siblings(sett.errorElement+'.'+sett.errorClass).css('display', 'none');
+                };
+            }
+            function reset_Sel(els) {
+                for (var i = 0; i < els.length; i++) {
+                    [].forEach.call(els[i].options, function(el) {
+                        el.selected = el.defaultSelected;
+                    });
+                    $(els[i]).removeClass(sett.errorClass).trigger('change').siblings(sett.errorElement+'.'+sett.errorClass).css('display', 'none');
+                };
+            }
+
         }
     });
 
@@ -316,22 +507,31 @@
         },
 
         messages: {
-            required: "This field is required.",
-            remote: "Please fix this field.",
-            email: "Please enter a valid email address.",
-            url: "Please enter a valid URL.",
-            date: "Please enter a valid date.",
-            dateISO: "Please enter a valid date ( ISO ).",
-            number: "Please enter a valid number.",
-            digits: "Please enter only digits.",
-            creditcard: "Please enter a valid credit card number.",
-            equalTo: "Please enter the same value again.",
-            maxlength: $.validator.format("Please enter no more than {0} characters."),
-            minlength: $.validator.format("Please enter at least {0} characters."),
-            rangelength: $.validator.format("Please enter a value between {0} and {1} characters long."),
-            range: $.validator.format("Please enter a value between {0} and {1}."),
-            max: $.validator.format("Please enter a value less than or equal to {0}."),
-            min: $.validator.format("Please enter a value greater than or equal to {0}.")
+            required: LANG_PLUGIN.validate[$.LANG_SITE].required,
+            password: LANG_PLUGIN.validate[$.LANG_SITE].password,
+            remote: LANG_PLUGIN.validate[$.LANG_SITE].remote,
+            email: LANG_PLUGIN.validate[$.LANG_SITE].email,
+            url: LANG_PLUGIN.validate[$.LANG_SITE].url,
+            date: LANG_PLUGIN.validate[$.LANG_SITE].date,
+            dateISO: LANG_PLUGIN.validate[$.LANG_SITE].dateISO,
+            number: LANG_PLUGIN.validate[$.LANG_SITE].number,
+            digits: LANG_PLUGIN.validate[$.LANG_SITE].digits,
+            creditcard: LANG_PLUGIN.validate[$.LANG_SITE].creditcard,
+            equalTo: LANG_PLUGIN.validate[$.LANG_SITE].equalTo,
+            maxlength: $.validator.format(LANG_PLUGIN.validate[$.LANG_SITE].maxlength),
+            minlength: $.validator.format(LANG_PLUGIN.validate[$.LANG_SITE].minlength),
+            rangelength: $.validator.format(LANG_PLUGIN.validate[$.LANG_SITE].rangelength),
+            range: $.validator.format(LANG_PLUGIN.validate[$.LANG_SITE].range),
+            filetype: $.validator.format(LANG_PLUGIN.validate[$.LANG_SITE].filetype),
+            filesize: $.validator.format(LANG_PLUGIN.validate[$.LANG_SITE].filesize),
+            filesizeEach: $.validator.format(LANG_PLUGIN.validate[$.LANG_SITE].filesizeEach),
+            max: $.validator.format(LANG_PLUGIN.validate[$.LANG_SITE].max),
+            min: $.validator.format(LANG_PLUGIN.validate[$.LANG_SITE].min),
+            // add
+            word: LANG_PLUGIN.validate[$.LANG_SITE].word,
+            login: LANG_PLUGIN.validate[$.LANG_SITE].login,
+            phoneUA: LANG_PLUGIN.validate[$.LANG_SITE].phoneUA,
+            extension: LANG_PLUGIN.validate[$.LANG_SITE].extension
         },
 
         autoCreateRanges: false,
@@ -1191,8 +1391,21 @@
             },
 
             filesize: function(value, element, param) {
-                // param = size (en bytes) 
-                return this.optional(element) || (element.files[0].size <= param);
+                var kb = 0;
+                for (var i = 0; i < element.files.length; i++) {
+                    kb += element.files[i].size;
+                }
+                return this.optional(element) || (kb / 1024 <= param);
+            },
+
+            filesizeEach: function(value, element, param) {
+                var flag = true;
+                for (var i = 0; i < element.files.length; i++) {
+                    if (element.files[i].size / 1024 > param) {
+                        flag = false;                        
+                    }
+                }
+                return this.optional(element) || (flag);
             },
 
             filetype: function(value, element, param) {
@@ -1237,11 +1450,6 @@
             // http://jqueryvalidation.org/digits-method/
             digits: function(value, element) {
                 return this.optional(element) || /^\d+$/.test(value);
-            },
-
-            or: function(value, element, param) {
-                var $module = $(element).parents('.wForm');
-                return $module.find('.' + param +':filled').length;
             },
 
             // http://jqueryvalidation.org/creditcard-method/
@@ -1392,27 +1600,6 @@
         }
 
     });
-    if ($('html').attr('lang').split('-').shift() === 'ru') {
-        $.extend($.validator.messages, {
-            required: "Это поле необходимо заполнить.",
-            remote: "Пожалуйста, введите правильное значение.",
-            email: "Пожалуйста, введите корректный адрес электронной почты.",
-            url: "Пожалуйста, введите корректный URL.",
-            date: "Пожалуйста, введите корректную дату.",
-            dateISO: "Пожалуйста, введите корректную дату в формате ISO.",
-            number: "Пожалуйста, введите число.",
-            digits: "Пожалуйста, вводите только цифры.",
-            creditcard: "Пожалуйста, введите правильный номер кредитной карты.",
-            equalTo: "Пожалуйста, введите такое же значение ещё раз.",
-            extension: "Пожалуйста, выберите файл с правильным расширением.",
-            maxlength: $.validator.format("Пожалуйста, введите не больше {0} символов."),
-            minlength: $.validator.format("Пожалуйста, введите не меньше {0} символов."),
-            rangelength: $.validator.format("Пожалуйста, введите значение длиной от {0} до {1} символов."),
-            range: $.validator.format("Пожалуйста, введите число от {0} до {1}."),
-            max: $.validator.format("Пожалуйста, введите число, меньшее или равное {0}."),
-            min: $.validator.format("Пожалуйста, введите число, большее или равное {0}.")
-        });
-    }
 
     $.format = function deprecated() {
         throw "$.format has been deprecated. Please use $.validator.format instead.";
@@ -1979,9 +2166,6 @@
                 mfp.contentContainer.append(mfp.content);
             },
 
-
-
-
             /**
              * Creates Magnific Popup data object based on given data
              * @param  {int} index Index of item to parse
@@ -2004,6 +2188,7 @@
 
                 if (item.el) {
                     var types = mfp.types;
+
 
                     // check for 'mfp-TYPE' class
                     for (var i = 0; i < types.length; i++) {
@@ -2325,9 +2510,9 @@
 
                 closeMarkup: '<button title="%title%" type="button" class="mfp-close">&times;</button>',
 
-                tClose: 'Close (Esc)',
+                tClose: LANG_PLUGIN.Magnific[$.LANG_SITE].tClose,
 
-                tLoading: 'Loading...'
+                tLoading: LANG_PLUGIN.Magnific[$.LANG_SITE].tLoading
 
             }
         };
@@ -2424,7 +2609,7 @@
             options: {
                 hiddenClass: 'hide', // will be appended with `mfp-` prefix
                 markup: '',
-                tNotFound: 'Content not found'
+                tNotFound: LANG_PLUGIN.Magnific[$.LANG_SITE].tNotFound
             },
             proto: {
 
@@ -2497,7 +2682,7 @@
             options: {
                 settings: null,
                 cursor: 'mfp-ajax-cur',
-                tError: '<a href="%url%">The content</a> could not be loaded.'
+                tError: LANG_PLUGIN.Magnific[$.LANG_SITE].tError
             },
 
             proto: {
@@ -2599,7 +2784,8 @@
                 cursor: 'mfp-zoom-out-cur',
                 titleSrc: 'title',
                 verticalFit: true,
-                tError: '<a href="%url%">The image</a> could not be loaded.'
+
+                tError: LANG_PLUGIN.Magnific[$.LANG_SITE].tErrorImage
             },
 
             proto: {
@@ -3131,9 +3317,9 @@
                 navigateByImgClick: true,
                 arrows: true,
 
-                tPrev: 'Previous (Left arrow key)',
-                tNext: 'Next (Right arrow key)',
-                tCounter: '%curr% of %total%'
+                tPrev: LANG_PLUGIN.Magnific[$.LANG_SITE].tPrev,
+                tNext: LANG_PLUGIN.Magnific[$.LANG_SITE].tNext,
+                tCounter: LANG_PLUGIN.Magnific[$.LANG_SITE].tCounter
             },
 
             proto: {
