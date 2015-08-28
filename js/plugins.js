@@ -471,10 +471,12 @@
             onkeyup: function(element, event) {
                 if (event.which === 9 && this.elementValue(element) === "") {
                     return;
+                } else if (event.which === 13) {
+                    $(this.currentForm).submit();
                 } else if (element.name in this.submitted || element === this.lastElement) {
                     this.element(element);
                 }
-            },
+            }
             onclick: function(element) {
                 // click on selects, radiobuttons and checkboxes
                 if (element.name in this.submitted) {
@@ -1402,7 +1404,7 @@
                 var flag = true;
                 for (var i = 0; i < element.files.length; i++) {
                     if (element.files[i].size / 1024 > param) {
-                        flag = false;                        
+                        flag = false;
                     }
                 }
                 return this.optional(element) || (flag);
@@ -1414,11 +1416,11 @@
             },
 
             word: function(value, element) {
-                return this.optional(element) || /^[a-zA-Zа-яА-ЯіІїЇєЄґҐ\'\`\- ]*$/.test(value);
+                return this.optional(element) || /^[a-zA-Zа-яА-ЯіІїЇєёЁЄґҐ\'\`\- ]*$/.test(value);
             },
 
             login: function(value, element) {
-                return this.optional(element) || /^[a-zA-Zа-яА-ЯіІїЇєЄґҐ][0-9a-zA-Zа-яА-ЯіІїЇєЄґҐ\-\._| ]+$/.test(value);
+                return this.optional(element) || /^[a-zA-Zа-яА-ЯіІїЇєЄёЁґҐ][0-9a-zA-Zа-яА-ЯіІїЇєЄґҐ\-\._| ]+$/.test(value);
             },
 
             // http://jqueryvalidation.org/email-method/
