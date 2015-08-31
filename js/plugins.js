@@ -476,7 +476,7 @@
                 } else if (element.name in this.submitted || element === this.lastElement) {
                     this.element(element);
                 }
-            }
+            },
             onclick: function(element) {
                 // click on selects, radiobuttons and checkboxes
                 if (element.name in this.submitted) {
