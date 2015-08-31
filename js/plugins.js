@@ -471,7 +471,7 @@
             onkeyup: function(element, event) {
                 if (event.which === 9 && this.elementValue(element) === "") {
                     return;
-                } else if (event.which === 13) {
+                } else if (event.which === 13 && element.tagName !== 'TEXTAREA') {
                     $(this.currentForm).submit();
                 } else if (element.name in this.submitted || element === this.lastElement) {
                     this.element(element);
