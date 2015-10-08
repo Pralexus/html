@@ -1,0 +1,117 @@
+/*-------------------------------  wBtns  ------------------------------------*/
+    .wBtn {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        font-size: 14px;
+        height: 29px;
+        line-height: 30px;
+        border: none;
+        background: #ececee;
+        background: -moz-linear-gradient(top, #fafafb 0%, #ececee 100%);
+        background: -webkit-linear-gradient(top, #fafafb 0%, #ececee 100%);
+        background: -ms-linear-gradient(top, #fafafb 0%, #ececee 100%);
+        background: linear-gradient(to bottom, #fafafb 0%, #ececee 100%);
+        box-shadow: 0 3px 0 #bfbfbf;
+        border-radius: 0.4em;
+        padding: 0 15px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        color: #666;
+        text-shadow: 1px 1px 0 #fff;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+    .wBtn:hover {
+        color: #222;
+        background: #fafafb;
+        box-shadow: 0 3px 0 #aaa;
+    }
+    .wBtn:active {
+        top: 1px;
+        color: #222;
+        box-shadow: inset 0 -2px 3px rgba(255,255,255,0.6), inset 0 2px 3px rgba(0,0,0,0.3), 0 2px 0 #999;
+    }
+    .wBtn > .svgHolder {
+        margin: -1px 4px 0;
+        text-decoration: none !important;
+        display: inline-block;
+        vertical-align: middle;
+        height: 12px;
+        width: 15px;
+    }
+    .wBtn > .svgHolder > svg {fill: #666; }
+    .wBtn:hover > .svgHolder > svg {fill: #222; }
+    .wBtn:active > .svgHolder > svg {fill: #222; }
+    /* lg */
+        .wBtn.lg {
+            font-size: 16px;
+            height: 39px;
+            line-height: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .wBtn.lg > .svgHolder {
+            margin-left: 6px;
+            margin-right: 6px;
+            height: 20px;
+            width: 20px;
+        }
+        .wFormSearch .wSubmit.wBtn.lg {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    /* primary */
+        .wBtn.primary {
+            color: #fff;
+            text-shadow: none;
+            background: #0089C5;
+            box-shadow: 0 3px 0 #025980;
+        }
+        .wBtn.primary:hover {background: #0295D5; }
+        .wBtn.primary:active {box-shadow: inset 0 -2px 5px rgba(255,255,255,0.6), inset 0 2px 3px rgba(0,0,0,0.4), 0 2px 0 #025980; }
+        .wBtn.primary > .svgHolder > svg {fill: #fff; }
+    /* succes */
+        .wBtn.succes {
+            color: #fff;
+            text-shadow: none;
+            background: #66a427;
+            box-shadow: 0 3px 0 #47721b;
+        }
+        .wBtn.succes:hover {background: #78BE30; }
+        .wBtn.succes:active {box-shadow: inset 0 -2px 5px rgba(255,255,255,0.6), inset 0 2px 3px rgba(0,0,0,0.4), 0 2px 0 #47721b; }
+        .wBtn.succes > .svgHolder > svg {fill: #fff; }
+    /* info */
+        .wBtn.info {
+            color: #fff;
+            text-shadow: none;
+            background: #53ABFF;
+            box-shadow: 0 3px 0 #2974BB;
+        }
+        .wBtn.info:hover {background: #74BBFF; }
+        .wBtn.info:active {box-shadow: inset 0 -2px 5px rgba(255,255,255,0.6), inset 0 2px 3px rgba(0,0,0,0.4), 0 2px 0 #2974BB; }
+        .wBtn.info > .svgHolder > svg {fill: #fff; }
+    /* warning */
+        .wBtn.warning {
+            color: #fff;
+            text-shadow: none;
+            background: #25CE25;
+            box-shadow: 0 3px 0 #209820;
+        }
+        .wBtn.warning:hover {background: #4ADB4A; }
+        .wBtn.warning:active {box-shadow: inset 0 -2px 5px rgba(255,255,255,0.6), inset 0 2px 3px rgba(0,0,0,0.4), 0 2px 0 #209820; }
+        .wBtn.warning > .svgHolder > svg {fill: #fff; }
+    /* danger */
+        .wBtn.danger {
+            color: #fff;
+            text-shadow: none;
+            background: #eb1f27;
+            box-shadow: 0 3px 0 #a4161b;
+        }
+        .wBtn.danger:hover {background: #EB4F1F; }
+        .wBtn.danger:active {box-shadow: inset 0 -2px 5px rgba(255,255,255,0.6), inset 0 2px 3px rgba(0,0,0,0.4), 0 2px 0 #a4161b; }
+        .wBtn.danger > .svgHolder > svg {fill: #fff; }

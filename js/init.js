@@ -29,21 +29,14 @@ $(document).ready(function() {
                     } else {
                         $.ajax({
                             type: 'POST',
-                            url: $(form).attr('data-form-url'), /* path/to/file.php */                        
+                            url: $(form).attr('data-form-url'),
                             data: $(form).find('select, textarea, input').serializeArray(),
                             dataType: 'json',
                             success: function(data) {
-                                
+
                             },
                             error: function() {
-                                $.magnificPopup.open({
-                                    items: {
-                                        src: '<div class="mfiModal" style="max-width: 300px;"><p>Форма отправлена</p><p>Для верстальщика все ок :)</p></div>',
-                                        type: 'inline'
-                                    },
-                                    removalDelay: 450,
-                                    mainClass: 'zoom-in'
-                                });
+                                console.log('Форма отправлена.');
                             }
                         });
                     }
@@ -52,22 +45,27 @@ $(document).ready(function() {
         });
 
         $('.wForm').on('change', '.wFile', function(event) {
-            var m = $(this).prop('multiple'), f = this.files,
-                label = $(this).siblings('.wFileVal'), t = label.data('txt');
+            var m = $(this).prop('multiple'),
+                f = this.files,
+                label = $(this).siblings('.wFileVal'),
+                t = label.data('txt');
             if (f.length) {
                 if (m) {
-                    var v = t[1].replace('%num%', f.length), a = [];
+                    var v = t[1].replace('%num%', f.length),
+                        a = [];
                     for (var i = 0; i < f.length; i++) {
                         a.push(f[i].name);
                     }
-                    label.html('<span>' + v + ' <ins>('+a.join(', ') + ')</ins></span>'); $(this).blur();
+                    label.html('<span>' + v + ' <ins>(' + a.join(', ') + ')</ins></span>');
+                    $(this).blur();
                 } else {
-                    label.html(t[1]+': '+f[0].name); $(this).blur();
+                    label.html(t[1] + ': ' + f[0].name);
+                    $(this).blur();
                 }
             } else {
                 label.html(t[0]);
             }
-        })
+        });
 
         /* Без тега FORM */
         $('.wForm').on('click', '.wSubmit', function(event) {
@@ -121,7 +119,7 @@ $(document).ready(function() {
                 //if (typeof $(ifr).data('wraped') === 'undefined') { // без фильтра
                 if (typeof $(ifr).data('wraped') === 'undefined' && !!ifr.src.match(filter)) {
                     var ratio = (+ifr.height / +ifr.width * 100).toFixed(0);
-                    $(ifr).data('wraped', true).wrap('<div class="iframeHolder ratio_'+ratio.slice()+'"></div>');
+                    $(ifr).data('wraped', true).wrap('<div class="iframeHolder ratio_' + ratio.slice() + '"></div>');
                 }
             }
         }

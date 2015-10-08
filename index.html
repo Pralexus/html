@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="ru-RU" dir="ltr">
-<!-- (c) студия Wezom | www.wezom.com.ua | v2.0 -->
+<!-- (c) студия Wezom | www.wezom.com.ua | v2.1 -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,8 @@
     <meta property="og:site_name" content="site.com"><!-- домен сайта -->
     <!--[if IE]><meta http-equiv="imagetoolbar" content="no"><![endif]-->
 
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->    
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- <meta name="viewport" content="width=1000"> -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="target-densitydpi=device-dpi">
@@ -54,6 +55,7 @@
 
     <style>.seoTxt{position:absolute;top:100%;left:0;width:100%;}</style>
     <link rel="stylesheet" href="css/plugin.css">
+    <link rel="stylesheet" href="css/components.css"><!-- демонстрация компонентов -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <!-- <link rel="stylesheet" href="css/responsive-portrait.css" media="all and (orientation:portrait)">-->
@@ -109,7 +111,7 @@
             <a class="wzmMsg_Link" href="http://wezom.com.ua/" target="_blank" title="Студия Wezom">
                 <img src="pic/wezom-info-red.gif" width="50" height="18" alt="Студия Wezom">
             </a>
-            <div class="wzmMsg_Close"><span>&times;</span></div>
+            <label for="wzmMsg_JsClose" class="wzmMsg_Close"><span>&times;</span></label>
         </div>
     </noscript>
     <script>
@@ -117,9 +119,9 @@
     </script>
     <!-- end WEZOM DEFS -->
     <!-- SVG-SPRITE -->
-    <svg id="sprite" xmlns="http://www.w3.org/2000/svg" style="height:0;width:0;visibility:hidden;position:absolute;top:0;left:0;" onload="spriteSvg.initialize(this,'js/sprite-svg.json')"></svg>
     <script>var spriteSvg={ns:"http://www.w3.org/2000/svg",initialize:function(e,t){if(this.prefix="spriteSvg_"+e.id,window.localSupport){var i=window.localStorage[this.prefix];if(i){var n=JSON.parse(i);this.setSprite(e,n)}else this.getJson(e,t)}else this.getJson(e,t)},getJson:function(e,t){var i=new XMLHttpRequest,n=this;i.open("GET",t,!0),i.setRequestHeader("Content-type","application/json"),i.onreadystatechange=function(){if(4==i.readyState&&200==i.status){var t=JSON.parse(i.responseText);n.setSprite(e,t),window.localSupport&&window.localWrite(n.prefix,JSON.stringify(t))}},i.send()},buildElem:function(e,t){var i,n,s;for(i in t)for(n in t[i]){var o=document.createElementNS(this.ns,n);for(s in t[i][n])"stops"===s?(this.buildElem(o,t[i][n][s])):o.setAttributeNS(null,s,t[i][n][s]);e.appendChild(o)}},isDone:function(){},setSprite:function(e,t){for(key in t){var i=t[key],n=document.createElementNS(this.ns,"symbol");n.setAttributeNS(null,"id",key),n.setAttributeNS(null,"viewBox",i.viewBox),this.buildElem(n,i.symbol),i.hasOwnProperty("gradients")&&this.buildElem(e,i.gradients),e.appendChild(n)}this.isDone(e)}};
     </script>
+    <svg id="sprite" xmlns="http://www.w3.org/2000/svg" style="height:0;width:0;visibility:hidden;position:absolute;top:0;left:0;" onload="spriteSvg.initialize(this,'js/sprite-svg.json')"></svg>
     <!-- end SVG-SPRITE -->
 </body>
 
