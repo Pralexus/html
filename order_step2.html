@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="ru-RU" dir="ltr">
+<!-- (c) студия Wezom | www.wezom.com.ua | v2.1 -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Верстка | (c) студия Wezom | www.wezom.com.ua</title>
+    <meta name="description" lang="ru-ru" content="">
+    <meta name="keywords" lang="ru-ru" content="студия wezom, разработка сайтов">
+    <meta name="keywords" lang="en-us" content="studio wezom, web development">
+    <meta name="author" lang="ru-ru" content="">
+
+    <meta property="og:title" content="Заголовок страницы">
+    <meta property="og:type" content="website"><!-- тип объекта - не изменять -->
+    <meta property="og:url" content="http://site.com/articles/example"><!-- url текущей страницы -->
+    <meta property="og:image" content="http://site.com/pic/image.jpg"><!-- изображение размером не менее 200х200 -->
+    <meta property="og:description" content="Short description text."><!-- краткий текст (новости, товара и т.д) -->
+    <meta property="og:site_name" content="site.com"><!-- домен сайта -->
+    <!--[if IE]><meta http-equiv="imagetoolbar" content="no"><![endif]-->
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- <meta name="viewport" content="width=1000"> -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="target-densitydpi=device-dpi">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- saved from url=(0014)about:internet -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicons/manifest.json"> <!-- php - тут и anroid_manifest изменить пути внутри файла на Media/... -->
+    <meta name="msapplication-config" content="browserconfig.xml"> <!-- php - изменить пути внутри файла на Media/... -->
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-title" content="Title"><!-- php - изменить -->
+    <meta name="application-name" content="Title"><!-- php - изменить -->
+    <meta name="msapplication-tooltip" content="Description"><!-- php - изменить -->
+
+    <style>.seoTxt{position:absolute;top:100%;left:0;width:100%;}</style>
+    <link rel="stylesheet" href="css/plugin.css">
+    <link rel="stylesheet" href="css/components.css"><!-- демонстрация компонентов -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- <link rel="stylesheet" href="css/responsive-portrait.css" media="all and (orientation:portrait)">-->
+    <!-- <link rel="stylesheet" href="css/responsive-landscape.css" media="all and (orientation:landscape)">-->
+    
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script>!function(t){function r(){var t=navigator.userAgent,r=!window.addEventListener||t.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/)&&!t.match(/Chrome/);if(r)return!1;var e="test";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(o){return!1}}t.localSupport=r(),t.localWrite=function(t,r){try{localStorage.setItem(t,r)}catch(e){if(e==QUOTA_EXCEEDED_ERR)return!1}}}(window);
+    </script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/init.js"></script>
+
+    <style>
+        .demoLogo {
+            width: 240px;
+            height: 100px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            background: #eee;
+            line-height: 100px;
+            text-align: center;
+        }
+        .demoLogo + ul {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .demoLogo + ul a.act {
+            color: #f00;
+        }
+        .demoLogo + ul a.act:before {
+            content: '► ';
+        }
+        .demoBasketBlock {
+            background: #eee;
+            line-height: 250px;
+            text-align: center;
+        }
+        .demoTxt {
+            display: inline-block;
+            vertical-align: middle;
+            font-size:30px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wWrapper">
+        <header class="wHeader">
+            <div class="wSize">
+                <div class="demoLogo fll">
+                    <span class="demoTxt">Logo</span>
+                </div>
+                <ul class="flr">
+                    <li><a href="order_step1.html">order_step1.html</a></li>
+                    <li><a href="order_step2.html" class="act">order_step2.html</a></li>
+                    <li><a href="order_step3.html">order_step3.html</a></li>
+                </ul>
+                <hr>
+            </div>
+        </header>
+        <!-- .wHeader -->
+        <div class="wConteiner">
+            <div class="wSize">
+                <div class="wOrder clearFix">
+                    <div class="wOrderMiddle">
+                        <div class="h4T">Оформление заказа</div>
+                        <nav>
+                            <ul>
+                                <li><span>Личные данные<small><a href="order_step1.html">Редактировать</a></small></span></li>
+                                <li><span>Доставка</span></li>
+                            </ul>
+                        </nav>
+                        <fieldset>
+                            <legend>Доставка вашего заказа</legend>
+                            <div class="wForm wFormDef" data-form="true">
+                                <div class="wFormRow">
+                                    <label class="wLabel" for="demo1">Лейбл поля *</label>
+                                    <div class="wCaption">Подсказка к полю. Lorem ipsum dolor.</div>
+                                    <div class="wFormInput">
+                                        <input type="text" class="wInput orValid" id="demo1" name="demo1" required>
+                                        <div class="inpInfo">DEMO1 *</div>
+                                    </div>
+                                </div>
+                                <div class="wFormRow">
+                                    <label class="wLabel" for="demo2">Лейбл поля *</label>
+                                    <div class="wCaption">Подсказка к полю. Lorem ipsum dolor.</div>
+                                    <div class="wFormInput">
+                                        <input type="text" class="wInput orValid" id="demo2" name="demo2" required>
+                                        <div class="inpInfo">DEMO2 *</div>
+                                    </div>
+                                </div>
+                                <div class="wFormRow">
+                                    <label class="wLabel" for="select1">Селект *</label>
+                                    <div class="wCaption">Подсказка к селекту. Lorem ipsum dolor.</div>
+                                    <div class="wFormInput">
+                                        <select class="wSelect" id="select1" name="select1" required data-msg-required="Введите пункт">
+                                            <option value="v0" selected disabled>Выберете пункт</option>
+                                            <option value="v1">Пункт для выбора - 1</option>
+                                            <option value="v2">Пункт для выбора - 2</option>
+                                            <option value="v3">Пункт для выбора - 3</option>
+                                            <option value="v4">Пункт для выбора - 4</option>
+                                            <option value="v5">Пункт для выбора - 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="wFormRow">
+                                    <button type="submit" class="wSubmit wBtn lg succes"><span>Следующий шаг</span></button>
+                                    <button type="reset" class="wReset wBtn lg danger"><span>Сбросить поля</span></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <nav>
+                            <ul>
+                                <li><span>Оплата</span></li>
+                            </ul>
+                        </nav>
+                    </div>                    
+                    <div class="wOrderRight">
+                        <div class="h4T">Ваш заказ</div>
+                        <div class="demoBasketBlock">
+                            <span class="demoTxt">demo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- .wSize -->
+        </div>
+        <!-- .wConteiner -->
+    </div>
+    <!-- .wWrapper -->
+    <footer class="wFooter">
+        <div class="wSize">
+        </div>
+    </footer>
+    <!-- .wFooter -->
+
+    <!-- WEZOM DEFS -->
+    <noscript>
+        <input id="wzmMsg_JsClose" type="checkbox" title="Закрыть">
+        <div id="wzmMsg_JsInform" class="wzmMsg_Wrapp">
+            <div class="wzmMsg_Text">
+                <p>В Вашем браузере <b>отключен JavaScript!</b> Для корректной работы с сайтом необходима поддержка Javascript.</p>
+                <p>Мы рекомендуем Вам включить использование JavaScript в настройках вашего браузера.</p>
+            </div>
+            <a class="wzmMsg_Link" href="http://wezom.com.ua/" target="_blank" title="Студия Wezom">
+                <img src="pic/wezom-info-red.gif" width="50" height="18" alt="Студия Wezom">
+            </a>
+            <label for="wzmMsg_JsClose" class="wzmMsg_Close"><span>&times;</span></label>
+        </div>
+    </noscript>
+    <script>
+    function $wzmOldInit(){var scrpt=document.createElement("script");scrpt.src="http://verstka.vps.kherson.ua/sources/plugins/wold/wold.js";document.body.appendChild(scrpt);};try{document.addEventListener("DOMContentLoaded",$wzmOldInit,false)}catch(e){window.attachEvent("onload",$wzmOldInit)}
+    </script>
+    <!-- end WEZOM DEFS -->
+    <!-- SVG-SPRITE -->
+    <script>var spriteSvg={ns:"http://www.w3.org/2000/svg",initialize:function(e,t){if(this.prefix="spriteSvg_"+e.id,window.localSupport){var i=window.localStorage[this.prefix];if(i){var n=JSON.parse(i);this.setSprite(e,n)}else this.getJson(e,t)}else this.getJson(e,t)},getJson:function(e,t){var i=new XMLHttpRequest,n=this;i.open("GET",t,!0),i.setRequestHeader("Content-type","application/json"),i.onreadystatechange=function(){if(4==i.readyState&&200==i.status){var t=JSON.parse(i.responseText);n.setSprite(e,t),window.localSupport&&window.localWrite(n.prefix,JSON.stringify(t))}},i.send()},buildElem:function(e,t){var i,n,s;for(i in t)for(n in t[i]){var o=document.createElementNS(this.ns,n);for(s in t[i][n])"stops"===s?(this.buildElem(o,t[i][n][s])):o.setAttributeNS(null,s,t[i][n][s]);e.appendChild(o)}},isDone:function(){},setSprite:function(e,t){for(key in t){var i=t[key],n=document.createElementNS(this.ns,"symbol");n.setAttributeNS(null,"id",key),n.setAttributeNS(null,"viewBox",i.viewBox),this.buildElem(n,i.symbol),i.hasOwnProperty("gradients")&&this.buildElem(e,i.gradients),e.appendChild(n)}this.isDone(e)}};
+    </script>
+    <svg id="sprite" xmlns="http://www.w3.org/2000/svg" style="height:0;width:0;visibility:hidden;position:absolute;top:0;left:0;" onload="spriteSvg.initialize(this,'js/sprite-svg.json')"></svg>
+    <!-- end SVG-SPRITE -->
+</body>
+
+</html>
