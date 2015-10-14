@@ -471,20 +471,6 @@
                 }
             },
             onkeyup: function(element, event) {
-                // Avoid revalidate the field when pressing one of the following keys
-                // Shift       => 16
-                // Ctrl        => 17
-                // Alt         => 18
-                // Caps lock   => 20
-                // End         => 35
-                // Home        => 36
-                // Left arrow  => 37
-                // Up arrow    => 38
-                // Right arrow => 39
-                // Down arrow  => 40
-                // Insert      => 45
-                // Num lock    => 144
-                // AltGr key   => 225
                 var excludedKeys = [
                     16, 17, 18, 20, 35, 36, 37,
                     38, 39, 40, 45, 144, 225
@@ -493,7 +479,9 @@
                 if (event.which === 9 && this.elementValue(element) === "" || $.inArray(event.keyCode, excludedKeys) !== -1) {
                     return;
                 } else if (event.which === 13 && element.tagName !== 'TEXTAREA') {
-                    $(this.currentForm).submit();
+                    if ($(this.currentForm).data('validator').checkForm()) {
+                        $(this.currentForm).submit();
+                    }
                 } else if (element.name in this.submitted || this.isValidElement(element)) {
                     this.element(element);
                 }
