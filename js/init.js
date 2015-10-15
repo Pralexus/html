@@ -93,11 +93,10 @@ $(document).ready(function() {
         delegate: '.mfiA',
         callbacks: {
             elementParse: function(item) {
-                mfiID = item.el.data('param').id;
                 this.st.ajax.settings = {
                     url: item.el.data('url'),
                     type: 'POST',
-                    data: item.el.data('param')
+                    data: (typeof item.el.data('param') !== 'undefined') ? item.el.data('param') : ''
                 };
             },
             ajaxContentAdded: function(el) {
