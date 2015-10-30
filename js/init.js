@@ -17,9 +17,9 @@ $(document).ready(function() {
                         this.errorList = n;
                     }
                     this.defaultShowErrors();
+                    this.focusInvalid();
                 },
                 invalidHandler: function(form, validator) {
-                    $(validator.errorList[0].element).trigger('focus');
                     formValid.addClass('no_valid');
                 },
                 submitHandler: function(form) {
