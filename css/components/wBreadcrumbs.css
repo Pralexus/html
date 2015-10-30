@@ -1,0 +1,52 @@
+/*-------------------------------  breadcrumbs  ------------------------------------*/
+    .breadcrumbs {
+        width: 100%;
+        display: table;
+        font-size: 0;
+        line-height: 0;
+        margin-bottom: 15px;
+    }
+    .breadcrumbs > span {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 14px;
+        line-height: 18px;
+        margin-right: 7px;
+        color: #000;
+    }
+    .breadcrumbs > span:before {
+        content: '›';
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 7px;
+    }
+    .breadcrumbs > span:first-child:before {
+        display: none;
+    }
+    .breadcrumbs > span > a {
+        text-decoration: underline;
+    }
+    
+    @media only screen and (max-width:620px) {
+        .breadcrumbs {
+            display: block;
+        }
+        .breadcrumbs > span, .breadcrumbs > span:before {
+            display: none;
+        }
+        .breadcrumbs > span:nth-last-child(2) {
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            background: none;
+            margin: 0;
+        }
+        .breadcrumbs > span:nth-last-child(2):before {
+            content: '‹';
+            display: inline;
+            font-size: 120%;
+            margin: 0 5px 0 3px;
+        }
+    }
