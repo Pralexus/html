@@ -17,10 +17,10 @@ $(document).ready(function() {
                         this.errorList = n;
                     }
                     this.defaultShowErrors();
-                    this.focusInvalid();
                 },
                 invalidHandler: function(form, validator) {
                     formValid.addClass('no_valid');
+                    $(formValid).data('validator').focusInvalid();
                 },
                 submitHandler: function(form) {
                     formValid.removeClass('no_valid');
@@ -32,9 +32,7 @@ $(document).ready(function() {
                             url: $(form).attr('data-form-url'),
                             data: $(form).find('select, textarea, input').serializeArray(),
                             dataType: 'json',
-                            success: function(data) {
-
-                            },
+                            success: function(data) {},
                             error: function() {
                                 console.log('Форма отправлена.');
                             }
